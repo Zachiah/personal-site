@@ -2,6 +2,8 @@
 	import SEO from '$lib/components/SEO.svelte';
 </script>
 
-<SEO title="Zachiah Sawyer | BJJ" />
+<SEO title="Zachiah Sawyer | BJJ" description="Hi my name is Zachiah Sawyer. This is my BJJ journey"/>
 
-<h1>TODO: Haven't written anything yet. Check back soon ¯\_(ツ)_/¯</h1>
+<p>I have been training at <a href="https://emergebjj.com/">Emerge BJJ</a> since February 2022</p>
+
+<p>TODO: Write more here</p>

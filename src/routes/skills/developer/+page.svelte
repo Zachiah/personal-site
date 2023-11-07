@@ -2,7 +2,10 @@
 	import SEO from '$lib/components/SEO.svelte';
 </script>
 
-<SEO title="Zachiah Sawyer | Fullstack Developer" />
+<SEO
+	title="Zachiah Sawyer | Fullstack Developer"
+	description="My name is Zachiah Sawyer. I am a fullstack developer. Here are some links showing my skills and past experience."
+/>
 
 <h1 class="text-4xl text-center mb-2">I am a fullstack developer</h1>
 

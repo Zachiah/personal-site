@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import SEO from '$lib/components/SEO.svelte';
 
-	let scrollY = 0;
+	let scrollY = typeof window === 'undefined' ? 0 : window.scrollY;
 
 	const interpolate = (a: number, b: number, p: number) => {
 		const diff = b - a;
@@ -11,8 +11,9 @@
 	};
 
 	// TODO: make it listen for window resizes and update this
-	$: windowHeight = typeof window === 'undefined' ? 0 : window.innerHeight;
-	$: percentage = Math.min(scrollY / windowHeight, 1);
+	$: windowHeight = typeof window === 'undefined' ? 1000 : window.innerHeight;
+	$: _percentage = Math.min(scrollY / windowHeight, 1);
+	$: percentage = isNaN(_percentage) ? 0 : _percentage;
 
 	$: nameStyles = `
         top: ${interpolate(50, 0, percentage)}%;
@@ -28,7 +29,7 @@
 	onMount(() => (mounted = true));
 </script>
 
-<SEO title="Zachiah Sawyer" />
+<SEO title="Zachiah Sawyer" description="Hi my name is Zachiah Sawyer. This is my personal site" />
 
 <svelte:window
 	on:scroll={() => {
@@ -36,7 +37,12 @@
 	}}
 />
 
-<div class="prose text-8xl mx-auto text-center z-50" class:fixed={mounted} style={nameStyles}>
+<div
+	class="prose mx-auto text-center z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[64px]"
+	class:fixed={mounted}
+	class:absolute={!mounted}
+	style={nameStyles}
+>
 	<h1 class="p-4 font-mono w-max max-w-[100vw]">Zachiah Sawyer</h1>
 </div>
 
