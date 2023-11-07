@@ -46,7 +46,7 @@
 
 {#if !isTouchDevice}
 	<div
-		class="fixed w-52 h-52 rounded-full shadow-inner bg-blue-500 mix-blend-difference z-50 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+		class="fixed w-52 h-52 rounded-full shadow-inner bg-gray-200 dark:bg-blue-500 mix-blend-difference z-50 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
 		style="top: {$mousePos.y}px; left: {$mousePos.x}px;"
 	/>
 {/if}
@@ -91,7 +91,7 @@
 >
 	<div class="prose mx-auto text-center">
 		<ul
-			class="text-gray-600 dark:text-gray-200 text-2xl sm:text-4xl flex flex-col gap-2 p-4 font-mono"
+			class="text-gray-800 dark:text-gray-200 text-2xl sm:text-4xl flex flex-col gap-2 p-4 font-mono"
 		>
 			<li>
 				<a href="/skills/developer" class="hover:underline"> Fullstack Developer </a>
