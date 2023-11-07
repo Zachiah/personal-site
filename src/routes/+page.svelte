@@ -9,6 +9,7 @@
 		return a + p * diff;
 	};
 
+    // TODO: make it listen for window resizes and update this
 	$: windowHeight = typeof window === 'undefined' ? 0 : window.innerHeight;
 	$: percentage = Math.min(scrollY / windowHeight, 1);
 
@@ -46,7 +47,7 @@
 			class="absolute w-24 h-24 flex items-center content-center rounded-full bg-blue-500 bg-opacity-50 bottom-24 transform -translate-x-1/2 left-1/2 scale-[var(--scale)]"
 			style="--scale: {interpolate(1, 0, percentage)}"
 			on:click={() => {
-				scrollDiv.scroll({ top: 1000, left: 0, behavior: 'smooth' });
+				scrollDiv.scroll({ top: windowHeight, left: 0, behavior: 'smooth' });
 			}}
 		>
 			<div
