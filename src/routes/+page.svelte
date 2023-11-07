@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import SEO from '$lib/components/SEO.svelte';
-	import { spring, tweened } from 'svelte/motion';
-    import throttle from 'lodash.throttle';
+	import { spring } from 'svelte/motion';
+	import throttle from 'lodash.throttle';
 
 	let scrollY = typeof window === 'undefined' ? 0 : window.scrollY;
 
@@ -30,9 +30,6 @@
 
 	let mounted = false;
 	onMount(() => (mounted = true));
-
-	let mousePos = spring({ x: -80, y: -80 }, { stiffness: 0.1, damping: 0.2 });
-	$: isTouchDevice = mounted && window.matchMedia('(pointer: coarse)').matches;
 </script>
 
 <SEO title="Zachiah Sawyer" description="Hi my name is Zachiah Sawyer. This is my personal site" />
@@ -41,17 +38,7 @@
 	on:scroll={throttle(() => {
 		scrollY = window.scrollY;
 	}, 50)}
-	on:mousemove={throttle((e) => {
-		$mousePos = { x: e.x, y: e.y };
-	}, 50)}
 />
-
-{#if !isTouchDevice}
-	<div
-		class="fixed w-52 h-52 rounded-full shadow-inner bg-gray-200 dark:bg-blue-500 mix-blend-difference z-50 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-		style="top: {$mousePos.y}px; left: {$mousePos.x}px;"
-	/>
-{/if}
 
 <div
 	class="prose mx-auto text-center z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[64px]"
