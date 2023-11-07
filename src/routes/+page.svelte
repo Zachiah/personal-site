@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import SEO from '$lib/components/SEO.svelte';
+	import { spring, tweened } from 'svelte/motion';
 
 	let scrollY = typeof window === 'undefined' ? 0 : window.scrollY;
 
@@ -27,6 +28,10 @@
 
 	let mounted = false;
 	onMount(() => (mounted = true));
+
+
+    let mouseX = spring(0);
+    let mouseY = spring(0);
 </script>
 
 <SEO title="Zachiah Sawyer" description="Hi my name is Zachiah Sawyer. This is my personal site" />
@@ -35,10 +40,16 @@
 	on:scroll={() => {
 		scrollY = window.scrollY;
 	}}
+    on:mousemove={(e) => {
+        $mouseX = e.x;
+        $mouseY = e.y;
+    }}
 />
 
+<div class="fixed w-52 h-52 rounded-full shadow-inner bg-blue-500 mix-blend-difference z-50 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none" style="top: {$mouseY}px; left: {$mouseX}px;" />
+
 <div
-	class="prose mx-auto text-center z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[64px]"
+	class="prose mx-auto text-center z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[64px]"
 	class:fixed={mounted}
 	class:absolute={!mounted}
 	style={nameStyles}
@@ -61,7 +72,7 @@
 		on:click={() => {
 			window.scroll({ top: windowHeight, left: 0, behavior: 'smooth' });
 		}}
-        aria-label="Scroll to next section"
+		aria-label="Scroll to next section"
 	>
 		<div
 			class="left-1/2 transform -translate-x-1/2 bg-blue-500 absolute mx-auto w-2 rounded-t-full h-10"
