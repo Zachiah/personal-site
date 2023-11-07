@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import SEO from '$lib/components/SEO.svelte';
 	import { spring, tweened } from 'svelte/motion';
+    import throttle from 'lodash.throttle';
 
 	let scrollY = typeof window === 'undefined' ? 0 : window.scrollY;
 
@@ -14,34 +15,35 @@
 	// TODO: make it listen for window resizes and update this
 	$: windowHeight = typeof window === 'undefined' ? 1000 : window.innerHeight;
 	$: _percentage = Math.min(scrollY / windowHeight, 1);
-	$: percentage = isNaN(_percentage) ? 0 : _percentage;
+	const percentage = spring(isNaN(_percentage) ? 0 : _percentage);
+	$: $percentage = isNaN(_percentage) ? 0 : _percentage;
 
 	$: nameStyles = `
-        top: ${interpolate(50, 0, percentage)}%;
+        top: ${interpolate(50, 0, $percentage)}%;
         transform: translate(
-            -${interpolate(50, 100, percentage)}%,
-            -${interpolate(50, 0, percentage)}%
+            -${interpolate(50, 100, $percentage)}%,
+            -${interpolate(50, 0, $percentage)}%
         );
-        left: ${interpolate(50, 100, percentage)}%;
-        font-size: ${interpolate(64, 16, percentage)}px;
+        left: ${interpolate(50, 100, $percentage)}%;
+        font-size: ${interpolate(64, 16, $percentage)}px;
     `;
 
 	let mounted = false;
 	onMount(() => (mounted = true));
 
-	let mousePos = spring({ x: -80, y: -80 }, {stiffness: 0.1, damping: 0.2});
+	let mousePos = spring({ x: -80, y: -80 }, { stiffness: 0.1, damping: 0.2 });
 	$: isTouchDevice = mounted && window.matchMedia('(pointer: coarse)').matches;
 </script>
 
 <SEO title="Zachiah Sawyer" description="Hi my name is Zachiah Sawyer. This is my personal site" />
 
 <svelte:window
-	on:scroll={() => {
+	on:scroll={throttle(() => {
 		scrollY = window.scrollY;
-	}}
-	on:mousemove={(e) => {
+	}, 50)}
+	on:mousemove={throttle((e) => {
 		$mousePos = { x: e.x, y: e.y };
-	}}
+	}, 50)}
 />
 
 {#if !isTouchDevice}
@@ -57,7 +59,9 @@
 	class:absolute={!mounted}
 	style={nameStyles}
 >
-	<h1 class="p-4 font-mono w-max max-w-[100vw]" style="view-transition-name: fullname;">Zachiah Sawyer</h1>
+	<h1 class="p-4 font-mono w-max max-w-[100vw]" style="view-transition-name: fullname;">
+		Zachiah Sawyer
+	</h1>
 </div>
 
 <div class="relative">
@@ -71,7 +75,7 @@
 >
 	<button
 		class="absolute w-24 h-24 flex items-center content-center rounded-full bg-blue-500 bg-opacity-50 bottom-24 transform -translate-x-1/2 left-1/2 scale-[var(--scale)]"
-		style="--scale: {interpolate(1, 0, percentage)}"
+		style="--scale: {interpolate(1, 0, $percentage)}"
 		on:click={() => {
 			window.scroll({ top: windowHeight, left: 0, behavior: 'smooth' });
 		}}
@@ -112,6 +116,6 @@
 
 	<div
 		class="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-[500px] max-w-[50vw] aspect-square rounded-full bg-blue-500 bg-opacity-50 translate scale-[var(--scale)]"
-		style="--scale: {interpolate(0, 1, percentage)}"
+		style="--scale: {interpolate(5, 1, $percentage)}"
 	/>
 </section>
