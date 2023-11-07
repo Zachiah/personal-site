@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import SEO from '$lib/components/SEO.svelte';
 
 	let scrollY = 0;
 
@@ -26,6 +27,8 @@
 	let mounted = false;
 	onMount(() => (mounted = true));
 </script>
+
+<SEO title="Zachiah Sawyer" />
 
 <svelte:window
 	on:scroll={() => {
