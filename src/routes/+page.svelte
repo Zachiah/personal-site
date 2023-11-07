@@ -25,14 +25,11 @@
 
 	let mounted = false;
 	onMount(() => (mounted = true));
-
-	let scrollDiv: HTMLElement;
 </script>
 
-<svelte:body
-	bind:this={scrollDiv}
-	on:scroll={(ev) => {
-		scrollY = ev.currentTarget.scrollTop;
+<svelte:window
+	on:scroll={() => {
+		scrollY = window.scrollY;
 	}}
 />
 
@@ -53,7 +50,7 @@
 		class="absolute w-24 h-24 flex items-center content-center rounded-full bg-blue-500 bg-opacity-50 bottom-24 transform -translate-x-1/2 left-1/2 scale-[var(--scale)]"
 		style="--scale: {interpolate(1, 0, percentage)}"
 		on:click={() => {
-			scrollDiv.scroll({ top: windowHeight, left: 0, behavior: 'smooth' });
+			window.scroll({ top: windowHeight, left: 0, behavior: 'smooth' });
 		}}
 	>
 		<div
