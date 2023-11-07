@@ -29,9 +29,8 @@
 	let mounted = false;
 	onMount(() => (mounted = true));
 
-
-    let mouseX = spring(0);
-    let mouseY = spring(0);
+	let mousePos = spring({ x: -80, y: -80 }, {stiffness: 0.1, damping: 0.2});
+	$: isTouchDevice = mounted && window.matchMedia('(pointer: coarse)').matches;
 </script>
 
 <SEO title="Zachiah Sawyer" description="Hi my name is Zachiah Sawyer. This is my personal site" />
@@ -40,13 +39,17 @@
 	on:scroll={() => {
 		scrollY = window.scrollY;
 	}}
-    on:mousemove={(e) => {
-        $mouseX = e.x;
-        $mouseY = e.y;
-    }}
+	on:mousemove={(e) => {
+		$mousePos = { x: e.x, y: e.y };
+	}}
 />
 
-<div class="fixed w-52 h-52 rounded-full shadow-inner bg-blue-500 mix-blend-difference z-50 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none" style="top: {$mouseY}px; left: {$mouseX}px;" />
+{#if !isTouchDevice}
+	<div
+		class="fixed w-52 h-52 rounded-full shadow-inner bg-blue-500 mix-blend-difference z-50 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+		style="top: {$mousePos.y}px; left: {$mousePos.x}px;"
+	/>
+{/if}
 
 <div
 	class="prose mx-auto text-center z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[64px]"
@@ -108,7 +111,7 @@
 	</div>
 
 	<div
-		class="absolute -bottom-20 -right-20 w-[500px] h-[500px] rounded-full bg-opacity-50 bg-blue-500 bg-opacity-50 translate scale-[var(--scale)]"
+		class="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-[500px] max-w-[50vw] aspect-square rounded-full bg-blue-500 bg-opacity-50 translate scale-[var(--scale)]"
 		style="--scale: {interpolate(0, 1, percentage)}"
 	/>
 </section>
