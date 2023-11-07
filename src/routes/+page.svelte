@@ -57,7 +57,7 @@
 	class:absolute={!mounted}
 	style={nameStyles}
 >
-	<h1 class="p-4 font-mono w-max max-w-[100vw]">Zachiah Sawyer</h1>
+	<h1 class="p-4 font-mono w-max max-w-[100vw]" style="view-transition-name: fullname;">Zachiah Sawyer</h1>
 </div>
 
 <div class="relative">
