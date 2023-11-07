@@ -61,6 +61,7 @@
 		on:click={() => {
 			window.scroll({ top: windowHeight, left: 0, behavior: 'smooth' });
 		}}
+        aria-label="Scroll to next section"
 	>
 		<div
 			class="left-1/2 transform -translate-x-1/2 bg-blue-500 absolute mx-auto w-2 rounded-t-full h-10"
