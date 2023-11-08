@@ -40,6 +40,7 @@
 
 <svelte:body
 	on:mousedown={(e) => {
+        console.log(e);
         const newId = id++;
 		circles.push({ faceSelected: $faceSelected, id: newId, x: e.x, y: e.y + window.scrollY });
 		circles = circles;
