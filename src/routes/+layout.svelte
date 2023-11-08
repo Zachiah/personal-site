@@ -29,7 +29,8 @@
 	$: isTouchDevice = mounted && window.matchMedia('(pointer: coarse)').matches;
 
 	let id = 0;
-	let circles: { id: number; x: number; y: number }[] = [];
+	let circles: { color: string; id: number; x: number; y: number }[] = [];
+	const colors = ['bg-blue-500', 'bg-red-500', 'bg-green-500', 'bg-purple-500', 'bg-orange-500'];
 </script>
 
 <svelte:window
@@ -41,21 +42,21 @@
 <svelte:body
 	on:mousedown={(e) => {
 		const newId = id++;
-		circles.push({ id: newId, x: e.x, y: e.y + window.scrollY });
+		circles.push({ color: colors[id % colors.length], id: newId, x: e.x, y: e.y + window.scrollY });
 		circles = circles;
 
 		setTimeout(() => {
 			circles = circles.filter((c) => c.id !== newId);
-		}, 2000);
+		}, 1000);
 	}}
 />
 
 {#each circles as circle (circle.id)}
 	<div
 		transition:fade
-		class="absolute w-40 h-40 rounded-full shadow-inner bg-gray-200 dark:bg-blue-500 mix-blend-difference z-50 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none {$faceSelected
+		class="absolute w-40 h-40 rounded-full shadow-inner mix-blend-difference z-50 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none {$faceSelected
 			? 'bg-[url(/pfp.webp)]'
-			: ''} bg-contain"
+			: ''} bg-contain {circle.color}"
 		style="top: {circle.y}px; left: {circle.x}px;"
 	/>
 {/each}
