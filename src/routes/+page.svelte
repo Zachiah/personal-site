@@ -58,7 +58,9 @@
 	style="--scale: {$percentage >= 1.5 ? 0 : interpolate(1, 0, $percentage % 1)}"
 	on:click={() => {
 		console.log('Scrolling');
-		window.scrollTo({ top: Math.max(window.scrollY, 0) + windowHeight * 1.5, left: 0, behavior: 'smooth' });
+        const sectionNumber = Math.ceil((window.scrollY + window.innerHeight / 2) / window.innerHeight);
+        console.log(sectionNumber);
+        document.querySelector(`#section${sectionNumber+1}`)?.scrollIntoView();
 	}}
 	aria-label="Scroll to next section"
 >
@@ -72,10 +74,12 @@
 
 <section
 	class="overflow-hidden relative bg-gradient-to-br from-blue-400 snap-start h-[100dvh] flex flex-col justify-center content-center"
+    id="section1"
 />
 
 <section
 	class="bg-gradient-to-tr overflow-hidden from-blue-500 relative snap-start h-[100dvh] flex flex-col justify-center content-center"
+    id="section2"
 >
 	<div class="prose mx-auto text-center">
 		<ul
@@ -102,7 +106,7 @@
 </section>
 
 <section
-	class="bg-gradient-to-tr overflow-hidden from-blue-500 relative snap-start h-[100dvh] flex flex-col justify-center items-center p-8"
+	id="section3" class="bg-gradient-to-tr overflow-hidden from-blue-500 relative snap-start h-[100dvh] flex flex-col justify-center items-center p-8"
 >
 	<button
 		class="group relative rounded-full bg-blue-500 bg-opacity-50"
