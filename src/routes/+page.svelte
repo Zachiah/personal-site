@@ -60,11 +60,8 @@
 		console.log('Scrolling');
 		const sectionNumber = Math.ceil((window.scrollY + window.innerHeight / 2) / window.innerHeight);
 		alert(`Scrolling. Detected Current Section Number: ${sectionNumber}`);
-		console.log(sectionNumber);
-		document.querySelector(`#section${sectionNumber + 1}`)?.scrollIntoView({
-			block: 'start',
-			behavior: 'smooth'
-		});
+		location.hash = "blah";
+        location.hash = `#section${sectionNumber + 1}`;
 	}}
 	aria-label="Scroll to next section"
 >
