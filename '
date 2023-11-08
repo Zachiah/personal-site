@@ -12,23 +12,14 @@
 		return a + p * diff;
 	};
 
-	let windowHeight = typeof window === 'undefined' ? 1000 : window.innerHeight;
+	// TODO: make it listen for window resizes and update this
+	$: windowHeight = typeof window === 'undefined' ? 1000 : window.innerHeight;
 	$: _percentage = Math.min(scrollY / windowHeight, 1);
 	const percentage = spring(isNaN(_percentage) ? 0 : _percentage);
 	$: $percentage = isNaN(_percentage) ? 0 : _percentage;
 
 	let mounted = false;
-	onMount(() => {
-		mounted = true;
-		let observer = new ResizeObserver(() => {
-			console.log('Resize');
-			windowHeight = window.innerHeight;
-		});
-
-		observer.observe(document.documentElement);
-
-		return () => observer.disconnect();
-	});
+	onMount(() => (mounted = true));
 </script>
 
 <SEO title="Zachiah Sawyer" description="Hi my name is Zachiah Sawyer. This is my personal site" />
@@ -78,19 +69,22 @@
 >
 	<div class="prose mx-auto text-center">
 		<ul
-			class="text-gray-800 dark:text-gray-200 text-2xl sm:text-4xl flex flex-col gap-8 p-4 font-mono"
+			class="text-gray-800 dark:text-gray-200 text-2xl sm:text-4xl flex flex-col gap-2 p-4 font-mono"
 		>
-			{#each [{ url: '/skills/developer', text: 'Fullstack Developer' }, { url: '/skills/pianist', text: 'Pianist' }, { url: '/skills/bjj', text: 'Jiujitsu Practitioner' }, { url: 'https://chess.com/member/zachiah1', text: 'Chess Player' }] as item}
-				<li>
-					<a
-						href={item.url}
-						target={item.url.startsWith('/') ? undefined : '_blank'}
-						class="block rounded-lg hover:underline active:bg-blue-600 bg-blue-800 p-4 hover:scale-110 transform scale-100 duration-200"
-					>
-						{item.text}
-					</a>
-				</li>
-			{/each}
+			<li>
+				<a href="/skills/developer" class="hover:underline"> Fullstack Developer </a>
+			</li>
+			<li>
+				<a href="/skills/pianist" class="hover:underline"> Pianist </a>
+			</li>
+			<li>
+				<a href="/skills/bjj" class="hover:underline"> Jiujitsu Practitioner </a>
+			</li>
+			<li>
+				<a href="https://chess.com/member/zachiah1" target="_blank" class="hover:underline">
+					Chess Player
+				</a>
+			</li>
 		</ul>
 	</div>
 
