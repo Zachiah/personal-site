@@ -14,7 +14,7 @@
 	};
 
 	let windowHeight = typeof window === 'undefined' ? 1000 : window.innerHeight;
-	$: _percentage = Math.min(scrollY / windowHeight, 1);
+	$: _percentage = scrollY / windowHeight;
 	const percentage = spring(isNaN(_percentage) ? 0 : _percentage);
 	$: $percentage = isNaN(_percentage) ? 0 : _percentage;
 
@@ -54,25 +54,26 @@
 	/>
 </div>
 
+<button
+	class="fixed z-20 w-24 h-24 flex items-center content-center rounded-full bg-blue-500 bg-opacity-50 bottom-24 transform -translate-x-1/2 left-1/2 scale-[var(--scale)]"
+	style="--scale: {$percentage === 2 ? 0 : interpolate(1, 0, $percentage % 1)}"
+	on:click={() => {
+		console.log('Scrolling');
+		window.scroll({ top: window.scrollY + windowHeight, left: 0, behavior: 'smooth' });
+	}}
+	aria-label="Scroll to next section"
+>
+	<div
+		class="left-1/2 transform -translate-x-1/2 bg-blue-500 absolute mx-auto w-2 rounded-t-full h-10"
+	/>
+	<div
+		class="left-1/2 transform -translate-x-1/2 top-16 absolute mx-auto w-0 h-0 box-content border-[12px] border-transparent border-t-blue-500"
+	/>
+</button>
+
 <section
 	class="overflow-hidden relative bg-gradient-to-br from-blue-400 snap-center h-screen flex flex-col justify-center content-center"
->
-	<button
-		class="absolute w-24 h-24 flex items-center content-center rounded-full bg-blue-500 bg-opacity-50 bottom-24 transform -translate-x-1/2 left-1/2 scale-[var(--scale)]"
-		style="--scale: {interpolate(1, 0, $percentage)}"
-		on:click={() => {
-			window.scroll({ top: windowHeight, left: 0, behavior: 'smooth' });
-		}}
-		aria-label="Scroll to next section"
-	>
-		<div
-			class="left-1/2 transform -translate-x-1/2 bg-blue-500 absolute mx-auto w-2 rounded-t-full h-10"
-		/>
-		<div
-			class="left-1/2 transform -translate-x-1/2 top-16 absolute mx-auto w-0 h-0 box-content border-[12px] border-transparent border-t-blue-500"
-		/>
-	</button>
-</section>
+/>
 
 <section
 	class="bg-gradient-to-tr overflow-hidden from-blue-500 relative snap-center h-screen flex flex-col justify-center content-center"
@@ -104,7 +105,10 @@
 <section
 	class="bg-gradient-to-tr overflow-hidden from-blue-500 relative snap-center h-screen flex flex-col justify-center items-center p-8"
 >
-	<button class="group relative rounded-full bg-blue-500 bg-opacity-50" on:click={() => ($faceSelected = !$faceSelected)}>
+	<button
+		class="group relative rounded-full bg-blue-500 bg-opacity-50"
+		on:click={() => ($faceSelected = !$faceSelected)}
+	>
 		<p
 			class="z-20 opacity-0 group-hover:opacity-100 bg-blue-500 bg-opacity-50 p-4 rounded-lg duration-200 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 		>
@@ -114,6 +118,13 @@
 				Don't click me
 			{/if}
 		</p>
-		<img width="400" height="400" src="/pfp.webp" class="max-w-full rounded-full duration-200" class:opacity-0={$faceSelected} alt="Zachiah Sawyer"  />
+		<img
+			width="400"
+			height="400"
+			src="/pfp.webp"
+			class="max-w-full rounded-full duration-200"
+			class:opacity-0={$faceSelected}
+			alt="Zachiah Sawyer"
+		/>
 	</button>
 </section>
