@@ -3,6 +3,7 @@
 	import SEO from '$lib/components/SEO.svelte';
 	import { spring } from 'svelte/motion';
 	import throttle from 'lodash.throttle';
+	import { faceSelected } from '$lib/faceSelected';
 
 	let scrollY = typeof window === 'undefined' ? 0 : window.scrollY;
 
@@ -98,4 +99,21 @@
 		class="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-[500px] max-w-[50vw] aspect-square rounded-full bg-blue-500 bg-opacity-50 translate scale-[var(--scale)]"
 		style="--scale: {interpolate(5, 1, $percentage)}"
 	/>
+</section>
+
+<section
+	class="bg-gradient-to-tr overflow-hidden from-blue-500 relative snap-center h-screen flex flex-col justify-center items-center p-8"
+>
+	<button class="group relative rounded-full bg-blue-500 bg-opacity-50" on:click={() => ($faceSelected = !$faceSelected)}>
+		<p
+			class="z-20 opacity-0 group-hover:opacity-100 bg-blue-500 bg-opacity-50 p-4 rounded-lg duration-200 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+		>
+			{#if $faceSelected}
+				Put me back!
+			{:else}
+				Don't click me
+			{/if}
+		</p>
+		<img width="400" height="400" src="/pfp.webp" class="max-w-full rounded-full duration-200" class:opacity-0={$faceSelected} alt="Zachiah Sawyer"  />
+	</button>
 </section>
