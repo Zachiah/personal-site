@@ -28,8 +28,8 @@
 	let mousePos = spring({ x: -80, y: -80 }, { stiffness: 0.1, damping: 0.2 });
 	$: isTouchDevice = mounted && window.matchMedia('(pointer: coarse)').matches;
 
-    let id = 0;
-	let circles: { id: number; x: number; y: number, faceSelected: boolean }[] = [];
+	let id = 0;
+	let circles: { id: number; x: number; y: number }[] = [];
 </script>
 
 <svelte:window
@@ -40,20 +40,20 @@
 
 <svelte:body
 	on:mousedown={(e) => {
-        console.log(e);
-        const newId = id++;
-		circles.push({ faceSelected: $faceSelected, id: newId, x: e.x, y: e.y + window.scrollY });
+		console.log(e);
+		const newId = id++;
+		circles.push({ id: newId, x: e.x, y: e.y + window.scrollY });
 		circles = circles;
 
-        setTimeout(() => {
-            circles = circles.filter(c => c.id !== newId);
-        }, 2000);
+		setTimeout(() => {
+			circles = circles.filter((c) => c.id !== newId);
+		}, 2000);
 	}}
 />
 
 {#each circles as circle (circle.id)}
 	<div
-        transition:fade
+		transition:fade
 		class="absolute w-40 h-40 rounded-full shadow-inner bg-gray-200 dark:bg-blue-500 mix-blend-difference z-50 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none {$faceSelected
 			? 'bg-[url(/pfp.webp)]'
 			: ''} bg-contain"
