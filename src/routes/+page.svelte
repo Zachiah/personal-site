@@ -60,6 +60,9 @@
 		console.log('Scrolling');
 		window.scrollTo({ top: Math.max(window.scrollY, 0) + windowHeight * 1.5, left: 0, behavior: 'smooth' });
 	}}
+    on:touchstart={() => {
+		window.scrollTo({ top: Math.max(window.scrollY, 0) + windowHeight * 1.5, left: 0, behavior: 'smooth' });
+    }}
 	aria-label="Scroll to next section"
 >
 	<div
