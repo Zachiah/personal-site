@@ -31,7 +31,7 @@
 	</li>
 	<li>
 		<a
-			href="https://www.icloud.com/iclouddrive/0443CE8IOtGZWdu8d6yBpkiUw#resume"
+			href="https://profile.indeed.com/p/zachiahs-rjmh6x5"
 			class="underline hover:text-blue-800 dark:text-blue-200"
 		>
 			My Resume
