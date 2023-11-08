@@ -22,7 +22,6 @@
 	onMount(() => {
 		mounted = true;
 		let observer = new ResizeObserver(() => {
-			console.log('Resize');
 			windowHeight = window.innerHeight;
 		});
 
@@ -56,10 +55,10 @@
 
 <button
 	class="fixed z-20 w-24 h-24 flex items-center content-center rounded-full bg-blue-500 bg-opacity-50 bottom-24 transform -translate-x-1/2 left-1/2 scale-[var(--scale)]"
-	style="--scale: {$percentage === 2 ? 0 : interpolate(1, 0, $percentage % 1)}"
+	style="--scale: {$percentage >= 1.5 ? 0 : interpolate(1, 0, $percentage % 1)}"
 	on:click={() => {
 		console.log('Scrolling');
-		window.scroll({ top: window.scrollY + windowHeight, left: 0, behavior: 'smooth' });
+		window.scrollTo({ top: Math.max(window.scrollY, 0) + windowHeight * 1.5, left: 0, behavior: 'smooth' });
 	}}
 	aria-label="Scroll to next section"
 >
