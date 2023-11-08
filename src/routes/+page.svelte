@@ -58,8 +58,8 @@
 	style="--scale: {$percentage >= 1.5 ? 0 : interpolate(1, 0, $percentage % 1)}"
 	on:click={() => {
 		console.log('Scrolling');
-        alert('Scrolling');
         const sectionNumber = Math.ceil((window.scrollY + window.innerHeight / 2) / window.innerHeight);
+        alert(`Scrolling. Detected Current Section Number: ${sectionNumber}`);
         console.log(sectionNumber);
         document.querySelector(`#section${sectionNumber+1}`)?.scrollIntoView();
 	}}
