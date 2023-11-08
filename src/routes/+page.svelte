@@ -57,11 +57,9 @@
 	class="fixed z-20 w-24 h-24 flex items-center content-center rounded-full bg-blue-500 bg-opacity-50 bottom-24 transform -translate-x-1/2 left-1/2 scale-[var(--scale)]"
 	style="--scale: {$percentage >= 1.5 ? 0 : interpolate(1, 0, $percentage % 1)}"
 	on:click={() => {
-		console.log('Scrolling');
 		const sectionNumber = Math.ceil((window.scrollY + window.innerHeight / 2) / window.innerHeight);
-		alert(`Scrolling. Detected Current Section Number: ${sectionNumber}`);
-		location.hash = "blah";
-        location.hash = `#section${sectionNumber + 1}`;
+		location.hash = 'blah';
+		location.hash = `#section${sectionNumber + 1}`;
 	}}
 	aria-label="Scroll to next section"
 >
@@ -70,6 +68,24 @@
 	/>
 	<div
 		class="left-1/2 transform -translate-x-1/2 top-16 absolute mx-auto w-0 h-0 box-content border-[12px] border-transparent border-t-blue-500"
+	/>
+</button>
+
+<button
+	class="fixed z-20 w-24 h-24 flex items-center content-center rounded-full bg-blue-500 bg-opacity-50 top-24 transform -translate-x-1/2 left-1/2 scale-[var(--scale)]"
+	style="--scale: {$percentage < .5 ? 0 : interpolate(1, 0, $percentage % 1)}"
+	on:click={() => {
+		const sectionNumber = Math.ceil((window.scrollY + window.innerHeight / 2) / window.innerHeight);
+		location.hash = 'blah';
+		location.hash = `#section${sectionNumber - 1}`;
+	}}
+	aria-label="Scroll to next section"
+>
+	<div
+		class="left-1/2 transform -translate-x-1/2 bg-blue-500 absolute mx-auto w-2 rounded-b-full h-10"
+	/>
+	<div
+		class="left-1/2 transform -translate-x-1/2 bottom-16 absolute mx-auto w-0 h-0 box-content border-[12px] border-transparent border-b-blue-500"
 	/>
 </button>
 
