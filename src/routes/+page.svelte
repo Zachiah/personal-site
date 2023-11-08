@@ -60,9 +60,6 @@
 		console.log('Scrolling');
 		window.scrollTo({ top: Math.max(window.scrollY, 0) + windowHeight * 1.5, left: 0, behavior: 'smooth' });
 	}}
-    on:touchstart={() => {
-		window.scrollTo({ top: Math.max(window.scrollY, 0) + windowHeight * 1.5, left: 0, behavior: 'smooth' });
-    }}
 	aria-label="Scroll to next section"
 >
 	<div
@@ -74,11 +71,11 @@
 </button>
 
 <section
-	class="overflow-hidden relative bg-gradient-to-br from-blue-400 snap-center h-[100dvh] flex flex-col justify-center content-center"
+	class="overflow-hidden relative bg-gradient-to-br from-blue-400 snap-start h-[100dvh] flex flex-col justify-center content-center"
 />
 
 <section
-	class="bg-gradient-to-tr overflow-hidden from-blue-500 relative snap-center h-[100dvh] flex flex-col justify-center content-center"
+	class="bg-gradient-to-tr overflow-hidden from-blue-500 relative snap-start h-[100dvh] flex flex-col justify-center content-center"
 >
 	<div class="prose mx-auto text-center">
 		<ul
@@ -105,7 +102,7 @@
 </section>
 
 <section
-	class="bg-gradient-to-tr overflow-hidden from-blue-500 relative snap-center h-[100dvh] flex flex-col justify-center items-center p-8"
+	class="bg-gradient-to-tr overflow-hidden from-blue-500 relative snap-start h-[100dvh] flex flex-col justify-center items-center p-8"
 >
 	<button
 		class="group relative rounded-full bg-blue-500 bg-opacity-50"
