@@ -4,6 +4,7 @@
 	import { spring } from 'svelte/motion';
 	import throttle from 'lodash.throttle';
 	import { faceSelected } from '$lib/faceSelected';
+	import PageSection from './PageSection.svelte';
 
 	let scrollY = typeof window === 'undefined' ? 0 : window.scrollY;
 
@@ -18,9 +19,7 @@
 	const percentage = spring(isNaN(_percentage) ? 0 : _percentage);
 	$: $percentage = isNaN(_percentage) ? 0 : _percentage;
 
-	let mounted = false;
 	onMount(() => {
-		mounted = true;
 		let observer = new ResizeObserver(() => {
 			windowHeight = window.innerHeight;
 		});
@@ -39,65 +38,22 @@
 	}, 50)}
 />
 
-<div
-	class="absolute prose mx-auto text-center z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-[64px]"
->
-	<h1 class="p-4 font-mono w-max max-w-[100vw]" style="view-transition-name: fullname;">
-		Zachiah Sawyer
-	</h1>
-</div>
-
 <div class="relative">
 	<div
 		class="w-72 h-60 bg-opacity-50 rounded-full transform -translate-x-1/2 -translate-y-1/2 bg-blue-500 absolute top-[calc(100vh_-_2rem)] left-0"
 	/>
 </div>
 
-<button
-	class="fixed z-20 w-24 h-24 flex items-center content-center rounded-full bg-blue-500 bg-opacity-50 bottom-12 md:bottom-24 transform -translate-x-1/2 left-1/2 scale-[var(--scale)]"
-	style="--scale: {$percentage >= 1.5 ? 0 : interpolate(1, 0, $percentage % 1)}"
-	on:click={() => {
-		const sectionNumber = Math.ceil((window.scrollY + window.innerHeight / 2) / window.innerHeight);
-		location.hash = 'blah';
-		location.hash = `#section${sectionNumber + 1}`;
-	}}
-	aria-label="Scroll to next section"
->
-	<div
-		class="left-1/2 transform -translate-x-1/2 bg-blue-500 absolute mx-auto w-2 rounded-t-full h-10"
-	/>
-	<div
-		class="left-1/2 transform -translate-x-1/2 top-16 absolute mx-auto w-0 h-0 box-content border-[12px] border-transparent border-t-blue-500"
-	/>
-</button>
+<PageSection colors="bg-gradient-to-br from-blue-400" num={1}>
+	<h1
+		class="text-center text-6xl font-mono"
+		style="view-transition-name: fullname;"
+	>
+		Zachiah Sawyer
+	</h1>
+</PageSection>
 
-<button
-	class="fixed z-20 w-24 h-24 flex items-center content-center rounded-full bg-blue-500 bg-opacity-50 top-12 md:top-24 transform -translate-x-1/2 left-1/2 scale-[var(--scale)]"
-	style="--scale: {$percentage < .5 ? 0 : interpolate(1, 0, $percentage % 1)}"
-	on:click={() => {
-		const sectionNumber = Math.ceil((window.scrollY + window.innerHeight / 2) / window.innerHeight);
-		location.hash = 'blah';
-		location.hash = `#section${sectionNumber - 1}`;
-	}}
-	aria-label="Scroll to next section"
->
-	<div
-		class="left-1/2 transform -translate-x-1/2 bg-blue-500 absolute mx-auto w-2 rounded-b-full h-10"
-	/>
-	<div
-		class="left-1/2 transform -translate-x-1/2 bottom-16 absolute mx-auto w-0 h-0 box-content border-[12px] border-transparent border-b-blue-500"
-	/>
-</button>
-
-<section
-	class="overflow-hidden relative bg-gradient-to-br from-blue-400 snap-start h-[100dvh] flex flex-col justify-center content-center"
-	id="section1"
-/>
-
-<section
-	class="bg-gradient-to-tr overflow-hidden from-blue-500 relative snap-start h-[100dvh] flex flex-col justify-center content-center"
-	id="section2"
->
+<PageSection colors="bg-gradient-to-tr from-blue-500" num={2}>
 	<div class="prose mx-auto text-center">
 		<ul
 			class="text-gray-800 dark:text-gray-200 text-2xl sm:text-4xl flex flex-col gap-8 p-4 font-mono"
@@ -120,12 +76,9 @@
 		class="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-[500px] max-w-[50vw] aspect-square rounded-full bg-blue-500 bg-opacity-50 translate scale-[var(--scale)]"
 		style="--scale: {interpolate(5, 1, $percentage)}"
 	/>
-</section>
+</PageSection>
 
-<section
-	id="section3"
-	class="bg-gradient-to-tr overflow-hidden from-blue-500 relative snap-start h-[100dvh] flex flex-col justify-center items-center p-8"
->
+<PageSection num={3} colors="bg-gradient-to-tr from-blue-500">
 	<button
 		class="group relative rounded-full bg-blue-500 bg-opacity-50"
 		on:click={() => ($faceSelected = !$faceSelected)}
@@ -148,4 +101,4 @@
 			alt="Zachiah Sawyer"
 		/>
 	</button>
-</section>
+</PageSection>
