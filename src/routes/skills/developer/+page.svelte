@@ -3,75 +3,70 @@
 </script>
 
 <SEO
-	title="Zachiah Sawyer | Fullstack Developer"
-	description="My name is Zachiah Sawyer. I am a fullstack developer. Here are some links showing my skills and past experience."
+	title="Zachiah Sawyer | Software Engineer"
+	description="My name is Zachiah Sawyer. I am a software engineer. Here are some links showing my skills and past experience."
 />
 
-<h1 class="text-4xl text-center mb-2">I am a fullstack developer</h1>
+<h1 class="text-4xl text-center mb-2">I am a software engineer</h1>
 
 <hr class="border-b border-black dark:border-white mb-4" />
 
 <h2 class="text-2xl">Links</h2>
 <ul class="list-disc list-inside">
 	<li>
-		<a
-			class="underline hover:text-blue-800 dark:hover:text-blue-200"
-			href="https://github.com/zachiah"
-		>
-			My GitHub profile
-		</a>
+		<a href="https://github.com/zachiah"> My GitHub profile </a>
 	</li>
 	<li>
-		<a
-			class="underline hover:text-blue-800 dark:hover:text-blue-200"
-			href="https://stackoverflow.com/users/10892722/zachiah"
-		>
-			My StackOverflow profile
-		</a>
+		<a href="https://stackoverflow.com/users/10892722/zachiah"> My StackOverflow profile </a>
 	</li>
 	<li>
-		<a
-			href="https://profile.indeed.com/p/zachiahs-rjmh6x5"
-			class="underline hover:text-blue-800 dark:text-blue-200"
-		>
-			My Resume
-		</a>
+		<a href="https://profile.indeed.com/p/zachiahs-rjmh6x5"> My Resume </a>
 	</li>
 	<li>
-		<a
-			href="https://www.freelancer.com/u/zachiahsawyer"
-			class="underline hover:text-blue-800 dark:text-blue-200"
-		>
-			My freelancer.com profile
-		</a>
+		<a href="https://www.freelancer.com/u/zachiahsawyer"> My freelancer.com profile </a>
 	</li>
 </ul>
 
 <h2 class="text-2xl">Projects</h2>
 <ul class="list-disc list-inside">
 	<li>
-		<a
-			class="underline hover:text-blue-800 dark:hover:text-blue-200"
-			href="https://timeline.zachiah.com"
-		>
-			Timeline of my life
-		</a>
+		<a href="https://timeline.zachiah.com"> Timeline of my life </a>
 	</li>
 	<li>
-		<a
-			class="underline hover:text-blue-800 dark:hover:text-blue-200"
-			href="https://svelte-conways-game-of-life.netlify.app/"
-		>
-			Conway's Game of Life
-		</a>
+		<a href="https://svelte-conways-game-of-life.netlify.app/"> Conway's Game of Life </a>
 	</li>
 	<li>
-		<a
-			class="underline hover:text-blue-800 dark:hover:text-blue-200"
-			href="https://github.com/Zachiah/lots-of-langs"
-		>
-			lots-of-langs
-		</a>
+		<a href="https://github.com/Zachiah/lots-of-langs"> lots-of-langs </a>
 	</li>
-	<li>TODO: Add more here</li>
 </ul>
+
+<h2 class="text-2xl">Tools I Use</h2>
+<ul class="list-disc list-inside">
+	<li>
+		<a href="https://neovim.io/"> Neovim (BTW) </a>
+	</li>
+	<li>
+		<a href="https://github.com/tmux/tmux/wiki"> Tmux </a>
+	</li>
+	<li>
+		<a href="https://nixos.org/"> Nix </a>
+	</li>
+</ul>
+
+<h2 class="text-2xl">About my development journey</h2>
+<p>
+	As far as I can tell, I started programming in March 2018. There was a book at the library called
+	"Electrical Engineering for Dummies" which I saw and decided to read. At the end there was a
+	section on programming a raspberry pi using python so I decided to get a raspberry pi and start
+	with that. Before I knew it I was more into programming then electrical engineering. After that I
+	continued learning many different programming languages, frameworks, tools, and such over the
+	years. I made my first money programming in October 2019 through{' '}<a
+		href="https://freelancer.com">Freelancer</a
+	>.
+</p>
+
+<style lang="postcss">
+	a {
+		@apply underline hover:text-blue-800 dark:hover:text-blue-200;
+	}
+</style>
