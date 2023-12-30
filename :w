@@ -3,6 +3,7 @@
 	import SEO from '$lib/components/SEO.svelte';
 	import { spring } from 'svelte/motion';
 	import throttle from 'lodash.throttle';
+	import { faceSelected } from '$lib/faceSelected';
 	import PageSection from './PageSection.svelte';
 
 	let scrollY = typeof window === 'undefined' ? 0 : window.scrollY;
@@ -43,20 +44,35 @@
 	/>
 </div>
 
-<PageSection colors="bg-gradient-to-br from-blue-400" num={1} id="top">
+<PageSection colors="bg-gradient-to-br from-blue-400" num={1}>
 	<h1 class="text-center text-6xl font-mono" style="view-transition-name: fullname;">
 		Zachiah Sawyer
 	</h1>
-	<img
-		width="400"
-		height="400"
-		src="/pfp.webp"
-		class="absolute top-0 left-0 max-w-full w-32 h-32 duration-200"
-		alt="Zachiah Sawyer"
-	/>
+	<button
+		class="group relative rounded-br-full bg-blue-500 bg-opacity-50"
+		on:click={() => ($faceSelected = !$faceSelected)}
+	>
+		<p
+			class="z-20 opacity-0 group-hover:opacity-100 bg-blue-500 bg-opacity-50 p-4 rounded-lg duration-200 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+		>
+			{#if $faceSelected}
+				Put me back!
+			{:else}
+				Don't click me
+			{/if}
+		</p>
+		<img
+			width="400"
+			height="400"
+			src="/pfp.webp"
+			class="max-w-full w-32 h-32 rounded-br-full duration-200"
+			class:opacity-0={$faceSelected}
+			alt="Zachiah Sawyer"
+		/>
+	</button>
 </PageSection>
 
-<PageSection colors="bg-gradient-to-tr from-blue-500" num={2} id="links">
+<PageSection colors="bg-gradient-to-tr from-blue-500" num={2}>
 	<div class="prose mx-auto text-center">
 		<ul
 			class="text-gray-800 dark:text-gray-200 text-2xl sm:text-4xl flex flex-col gap-8 p-4 font-mono"
