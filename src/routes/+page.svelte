@@ -66,7 +66,7 @@
 					<a
 						href={item.url}
 						target={item.url.startsWith('/') ? undefined : '_blank'}
-						class="block rounded-lg hover:underline active:bg-blue-600 bg-blue-800 p-4 hover:scale-110 transform scale-100 duration-200"
+						class="block rounded-lg hover:underline active:bg-blue-600 bg-gradient-to-br from-blue-950 to-blue-800 bg-blue-950 p-4 hover:scale-110 transform scale-100 duration-200"
 					>
 						{item.text}
 					</a>
