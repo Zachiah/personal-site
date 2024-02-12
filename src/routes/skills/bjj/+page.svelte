@@ -1,11 +1,20 @@
 <script lang="ts">
+	import Content from '$lib/components/Content.svelte';
 	import SEO from '$lib/components/SEO.svelte';
 </script>
 
-<SEO title="Zachiah Sawyer | BJJ" description="Hi my name is Zachiah Sawyer. This is my BJJ journey"/>
+<SEO
+	title="Zachiah Sawyer | BJJ"
+	description="Hi my name is Zachiah Sawyer. This is my BJJ journey"
+/>
 
-<p>I started training at <a href="https://emergebjj.com/">Emerge BJJ</a> since February 2022</p>
+<Content>
+	<h1>Key points on my BJJ journey so far</h1>
+	<ul>
+		<li>I started training at <a href="https://emergebjj.com/">Emerge BJJ</a> since February 2022</li>
 
-<p>I got my blue belt on January 23 2024</p>
+		<li>I got my blue belt on January 23 2024</li>
 
-<p>I started training at CDA Jiujitsu in February 2024</p>
+		<li>I started training at <a href="https://cdajiujitsu.com/">CDA Jiujitsu</a> in February 2024</li>
+	</ul>
+</Content>

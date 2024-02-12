@@ -1,41 +1,9 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import SEO from '$lib/components/SEO.svelte';
-	import { spring } from 'svelte/motion';
-	import throttle from 'lodash.throttle';
 	import PageSection from './PageSection.svelte';
-
-	let scrollY = typeof window === 'undefined' ? 0 : window.scrollY;
-
-	const interpolate = (a: number, b: number, p: number) => {
-		const diff = b - a;
-
-		return a + p * diff;
-	};
-
-	let windowHeight = typeof window === 'undefined' ? 1000 : window.innerHeight;
-	$: _percentage = scrollY / windowHeight;
-	const percentage = spring(isNaN(_percentage) ? 0 : _percentage);
-	$: $percentage = isNaN(_percentage) ? 0 : _percentage;
-
-	onMount(() => {
-		let observer = new ResizeObserver(() => {
-			windowHeight = window.innerHeight;
-		});
-
-		observer.observe(document.documentElement);
-
-		return () => observer.disconnect();
-	});
 </script>
 
 <SEO title="Zachiah Sawyer" description="Hi my name is Zachiah Sawyer. This is my personal site" />
-
-<svelte:window
-	on:scroll={throttle(() => {
-		scrollY = window.scrollY;
-	}, 50)}
-/>
 
 <div class="relative">
 	<div
@@ -43,7 +11,7 @@
 	/>
 </div>
 
-<PageSection colors="bg-gradient-to-br from-blue-400" num={1} id="top">
+<PageSection colors="bg-gradient-to-br from-blue-400" id="top">
 	<h1 class="text-center text-6xl font-mono" style="view-transition-name: fullname;">
 		Zachiah Sawyer
 	</h1>
@@ -56,7 +24,7 @@
 	/>
 </PageSection>
 
-<PageSection colors="bg-gradient-to-tr from-blue-500" num={2} id="links">
+<PageSection colors="bg-gradient-to-tr from-blue-500" id="links">
 	<div class="prose mx-auto text-center">
 		<ul
 			class="text-gray-800 dark:text-gray-200 text-2xl sm:text-4xl flex flex-col gap-8 p-4 font-mono"
@@ -76,7 +44,6 @@
 	</div>
 
 	<div
-		class="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-[500px] max-w-[50vw] aspect-square rounded-full bg-blue-500 bg-opacity-50 translate scale-[var(--scale)]"
-		style="--scale: {interpolate(5, 1, $percentage)}"
+		class="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 w-[500px] max-w-[50vw] aspect-square rounded-full bg-blue-500 bg-opacity-50"
 	/>
 </PageSection>

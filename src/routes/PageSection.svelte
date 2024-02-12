@@ -1,6 +1,5 @@
 <script lang="ts">
 	export let colors: string;
-	export let num: number;
 	export let id: string;
 </script>
 
