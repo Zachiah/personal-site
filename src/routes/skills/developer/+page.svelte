@@ -73,7 +73,7 @@
 		</li>
 	</ul>
 
-	<h2>Languages I'm interested in getting a lot of experience in (in order)</h2>
+	<h2>Languages I'm interested in mastering</h2>
 	<ul>
 		<li>
 			<a href="https://rust-lang.org">Rust</a>
