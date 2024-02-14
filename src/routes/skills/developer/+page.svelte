@@ -109,4 +109,49 @@
 			href="https://freelancer.com">Freelancer</a
 		>.
 	</p>
-</Content>
+
+	<h2>About my approach to software development</h2>
+	<p>
+		I am very passionate about writing good software. There are numerous things that go into whether
+		or not software is "good" but here are some of the top things in my opinion:
+	</p>
+	<ul>
+		<li>
+			<b>Correctness:</b> Software should be correct. If it doesn't do what it is supposed to, then not
+			much else matters
+		</li>
+		<li>
+			<b>Accessibility / Ease of use:</b> If your users can't use your software then it doesn't matter
+			how good the idea is or how interesting the internals are
+		</li>
+		<li>
+			<b>Reliability:</b> No one likes to use software that isn't reliable. Users shouldn't have to look
+			for workarounds in order to use your software. It should "Just Work" as close to 100% of the time
+			as possible. It is important to consider edge cases that aren't in the happy path.
+		</li>
+		<li>
+			<b>Maintainability:</b> A hallmark of bad software is that it is difficult to maintain. Of course
+			this is subjective, but if it takes exponentially longer to develop each new feature then you know
+			something has probably gone awry. Also I don't think that software is more or less maintainable
+			inherently because it follows some particular design pattern or philosophy. I have a preference
+			for functional programming where it makes sense, but also use imperative and object oriented programming
+			patterns when I feel they better suite the problem.
+		</li>
+		<li>
+			<b>Performance:</b> Software should be performant as a default. There are some cases where writing
+			code in the most performant way requires sacrificing heavily on some of the other items on this
+			list, and for those cases I will often sacrifice a bit of performance. The important thing in my
+			opinion is that you always have performance on your mind as you develop software. If you need to
+			rewrite some of it later to be slightly more performant then you should be able to do so provided
+			you have considered that outcome already due to being performance-conscious from day 1. There is
+			definitely a balance between maintainability and performance and I do acknowledge that they can
+			often be at odds. Where exactly the software I'm writing falls on the spectrum is based on the
+			business requirements and particular problem domain.
+		</li>
+		<li>
+			<b>Beauty:</b> Good software should be beautiful. This is very subjective, but I don't enjoy building
+			software that I hate looking at and will almost always take a little extra time to make things
+			look pretty even if it isn't the top priority.
+		</li>
+	</ul></Content
+>
