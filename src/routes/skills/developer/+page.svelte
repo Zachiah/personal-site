@@ -107,7 +107,7 @@
 		that I continued learning many different programming languages, frameworks, tools, and such over
 		the years. I made my first money programming in October 2019 through{' '}<a
 			href="https://freelancer.com">Freelancer</a
-		>.
+		>. I started working for <a href="https://www.cloudone.com">CloudOne</a> in May of 2023.
 	</p>
 
 	<h2>About my approach to software development</h2>
@@ -115,7 +115,7 @@
 		I am very passionate about writing good software. There are numerous things that go into whether
 		or not software is "good" but here are some of the top things in my opinion:
 	</p>
-	<ul>
+	<ul class="spaced">
 		<li>
 			<b>Correctness:</b> Software should be correct. If it doesn't do what it is supposed to, then not
 			much else matters

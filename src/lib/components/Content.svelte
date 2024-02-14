@@ -26,4 +26,8 @@
 	div :global(p) {
 		@apply my-4
 	}
+
+	div :global(.spaced li) {
+		@apply mb-4
+	}
 </style>
