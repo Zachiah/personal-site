@@ -8,7 +8,7 @@
 	}
 
 	div :global(h2) {
-		@apply text-2xl;
+		@apply text-2xl mt-6;
 	}
 
 	div :global(ul) {
@@ -21,5 +21,9 @@
 
 	div :global(a) {
 		@apply underline hover:text-blue-800 dark:hover:text-blue-200;
+	}
+
+	div :global(p) {
+		@apply my-4
 	}
 </style>

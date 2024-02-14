@@ -39,6 +39,9 @@
 		<li>
 			<a href="https://github.com/Zachiah/lots-of-langs"> lots-of-langs </a>
 		</li>
+		<li>
+			<a href="https://github.com/Zachiah/taita"> Taita </a>
+		</li>
 	</ul>
 
 	<h2>Tools I Use</h2>
@@ -51,6 +54,38 @@
 		</li>
 		<li>
 			<a href="https://nixos.org/"> Nix </a>
+		</li>
+	</ul>
+
+	<h2>Languages I have experience with</h2>
+	<ul>
+		<li>
+			<a href="https://rust-lang.org">Rust</a>
+		</li>
+		<li>
+			<a href="https://typescript-lang.org">TypeScript</a>
+		</li>
+		<li>
+			<a href="https://www.php.net/">PHP</a>
+		</li>
+		<li>
+			<a href="https://www.python.org/">Python</a>
+		</li>
+	</ul>
+
+	<h2>Languages I'm interested in getting a lot of experience in (in order)</h2>
+	<ul>
+		<li>
+			<a href="https://rust-lang.org">Rust</a>
+		</li>
+		<li>
+			<a href="https://go.dev/">Go</a>
+		</li>
+		<li>
+			<a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a>
+		</li>
+		<li>
+			<a href="https://www.haskell.org">Haskell</a>
 		</li>
 	</ul>
 
