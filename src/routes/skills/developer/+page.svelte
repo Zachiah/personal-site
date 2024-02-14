@@ -53,7 +53,16 @@
 			<a href="https://github.com/tmux/tmux/wiki"> Tmux </a>
 		</li>
 		<li>
-			<a href="https://nixos.org/"> Nix </a>
+			<a href="https://nixos.org/"> Nix & NixOS </a>
+		</li>
+		<li>
+			<a href="https://swaywm.org/"> Sway </a>
+		</li>
+		<li>
+			<a href="https://github.com/zachiah/taita"> Taita </a>
+		</li>
+		<li>
+			<a href="https://alacritty.org/"> Alacritty </a>
 		</li>
 	</ul>
 

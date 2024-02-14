@@ -29,7 +29,7 @@
 		<ul
 			class="text-gray-800 dark:text-gray-200 text-2xl sm:text-4xl flex flex-col gap-8 p-4 font-mono"
 		>
-			{#each [{ url: '/skills/developer', text: 'Software Engineer' }, { url: '/skills/pianist', text: 'Pianist' }, { url: '/skills/bjj', text: 'Jiujitsu Practitioner' }, { url: 'https://chess.com/member/zachiah1', text: 'Chess Player' }] as item}
+			{#each [{ url: '/skills/developer', text: 'Software Engineer' }, { url: '/skills/pianist', text: 'Pianist' }, { url: '/skills/bjj', text: 'Jiujitsu Practitioner' }, { url: 'https://chess.com/member/zachiah1', text: 'Chess Player' }, { url: '/skills/trampoliner', text: 'Trampoliner' }] as item}
 				<li>
 					<a
 						href={item.url}
