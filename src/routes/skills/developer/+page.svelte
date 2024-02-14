@@ -135,7 +135,7 @@
 			something has probably gone awry. Also I don't think that software is more or less maintainable
 			inherently because it follows some particular design pattern or philosophy. I have a preference
 			for functional programming where it makes sense, but also use imperative and object oriented programming
-			patterns when I feel they better suite the problem.
+			patterns when I feel they better suit the problem.
 		</li>
 		<li>
 			<b>Performance:</b> Software should be performant as a default. There are some cases where writing
