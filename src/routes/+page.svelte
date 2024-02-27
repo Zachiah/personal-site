@@ -16,9 +16,9 @@
 			>
 				Zachiah Sawyer
 			</h1>
-			<div class="bg-blue-500 bg-gradient-to-br from-blue-500 to-orange-800 rounded-lg">
+			<div class="rounded-lg bg-blue-500 bg-gradient-to-br from-blue-500 to-orange-800">
 				<img
-					class="h-72 w-auto rounded-lg shadow-lg opacity-60 hover:opacity-100 duration-200"
+					class="h-72 w-auto rounded-lg opacity-60 shadow-lg duration-200 hover:opacity-100"
 					width="400"
 					height="400"
 					src="/pfp.webp"
