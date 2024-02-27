@@ -16,13 +16,15 @@
 			>
 				Zachiah Sawyer
 			</h1>
-			<img
-				class="h-72 w-auto rounded-lg shadow-lg"
-				width="400"
-				height="400"
-				src="/pfp.webp"
-				alt="Zachiah Sawyer"
-			/>
+			<div class="bg-blue-500 bg-gradient-to-br from-blue-500 to-orange-800 rounded-lg">
+				<img
+					class="h-72 w-auto rounded-lg shadow-lg opacity-60 hover:opacity-100 duration-200"
+					width="400"
+					height="400"
+					src="/pfp.webp"
+					alt="Zachiah Sawyer"
+				/>
+			</div>
 			<Skill
 				url="/skills/developer"
 				text="Software Engineer"
