@@ -3,7 +3,7 @@
 </script>
 
 <button
-	class="absolute z-20 w-24 h-24 flex items-center content-center rounded-full bg-blue-500 bg-opacity-50 transform -translate-x-1/2 left-1/2 {btn ===
+	class="absolute left-1/2 z-20 flex h-24 w-24 -translate-x-1/2 transform content-center items-center rounded-full bg-blue-500 bg-opacity-50 {btn ===
 	'down'
 		? 'bottom-12 md:bottom-24'
 		: 'top-12 md:top-24'} "
@@ -16,14 +16,14 @@
 	aria-label="Scroll to {btn === 'up' ? 'previous' : 'next'} section"
 >
 	<div
-		class="left-1/2 transform -translate-x-1/2 bg-blue-500 absolute mx-auto w-2 {btn === 'up'
+		class="absolute left-1/2 mx-auto w-2 -translate-x-1/2 transform bg-blue-500 {btn === 'up'
 			? 'rounded-b-full'
 			: 'rounded-t-full'} h-10"
 	/>
 
 	<div
-		class="left-1/2 transform -translate-x-1/2 {btn === 'down'
+		class="left-1/2 -translate-x-1/2 transform {btn === 'down'
 			? 'top-16 border-t-blue-500'
-			: 'bottom-16 border-b-blue-500'} absolute mx-auto w-0 h-0 box-content border-[12px] border-transparent"
+			: 'bottom-16 border-b-blue-500'} absolute mx-auto box-content h-0 w-0 border-[12px] border-transparent"
 	/>
 </button>

@@ -53,24 +53,24 @@
 {#each circles as circle (circle.id)}
 	<div
 		transition:fade
-		class="absolute w-40 h-40 rounded-full shadow-inner mix-blend-difference z-50 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none bg-contain {circle.color}"
+		class="pointer-events-none absolute z-50 h-40 w-40 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-contain mix-blend-difference shadow-inner {circle.color}"
 		style="top: {circle.y}px; left: {circle.x}px;"
 	/>
 {/each}
 
 {#if !isTouchDevice}
 	<div
-		class="fixed w-40 h-40 rounded-full shadow-inner bg-gray-200 dark:bg-blue-500 mix-blend-difference z-50 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none bg-contain"
+		class="pointer-events-none fixed z-50 h-40 w-40 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-gray-200 bg-contain mix-blend-difference shadow-inner dark:bg-blue-500"
 		style="top: {$mousePos.y}px; left: {$mousePos.x}px;"
 	/>
 {/if}
 
 {#if $page.url.pathname !== '/'}
-	<nav class="w-full flex p-8 font-mono text-blue-800 max-w-[100vw]">
+	<nav class="flex w-full max-w-[100vw] p-8 font-mono text-blue-800">
 		<a
 			href="/#links"
 			style="view-transition-name: fullname;"
-			class="rounded-lg shadow-lg shadow-blue-800 ml-auto bg-blue-200 p-4 hover:bg-blue-800 hover:text-gray-200 focus:bg-blue-800 focus:text-gray-200 duration-200 transform scale-100 active:scale-110"
+			class="ml-auto scale-100 transform rounded-lg bg-blue-200 p-4 shadow-lg shadow-blue-800 duration-200 hover:bg-blue-800 hover:text-gray-200 focus:bg-blue-800 focus:text-gray-200 active:scale-110"
 			>Zachiah Sawyer</a
 		>
 	</nav>
@@ -106,12 +106,14 @@
 	}
 
 	:root::view-transition-old(root) {
-		animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
+		animation:
+			90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
 			300ms cubic-bezier(0.4, 0, 0.2, 1) both scale-out;
 	}
 
 	:root::view-transition-new(root) {
-		animation: 210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
+		animation:
+			210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
 			300ms cubic-bezier(0.4, 0, 0.2, 1) both scale-in;
 	}
 </style>

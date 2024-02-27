@@ -4,8 +4,8 @@
 </script>
 
 <section
-	class="overflow-hidden p-8 relative snap-start h-[100dvh] flex flex-col justify-center items-center {colors}"
-	id={id}
+	class="relative flex min-h-[100dvh] snap-start flex-col items-center justify-center overflow-hidden p-8 {colors}"
+	{id}
 >
 	<slot />
 </section>

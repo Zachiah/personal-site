@@ -4,19 +4,19 @@
 
 <style lang="postcss">
 	div :global(h1) {
-		@apply text-4xl text-center mb-2;
+		@apply mb-2 text-center text-4xl;
 	}
 
 	div :global(h2) {
-		@apply text-2xl mt-6;
+		@apply mt-6 text-2xl;
 	}
 
 	div :global(ul) {
-		@apply list-disc list-inside;
+		@apply list-inside list-disc;
 	}
 
 	div :global(hr) {
-		@apply border-b border-black dark:border-white mb-4;
+		@apply mb-4 border-b border-black dark:border-white;
 	}
 
 	div :global(a) {
@@ -24,10 +24,10 @@
 	}
 
 	div :global(p) {
-		@apply my-4
+		@apply my-4;
 	}
 
 	div :global(.spaced li) {
-		@apply mb-4
+		@apply mb-4;
 	}
 </style>
