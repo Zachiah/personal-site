@@ -1,4 +1,4 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config}*/
 const config = {
@@ -8,9 +8,9 @@ const config = {
 		extend: {},
 		screens: {
 			'2xs': '305px',
-			'xs': '412px',
-			...defaultTheme.screens,
-		},
+			xs: '412px',
+			...defaultTheme.screens
+		}
 	},
 
 	plugins: []
