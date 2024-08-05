@@ -31,38 +31,41 @@
 	<h2>Projects</h2>
 	<ul>
 		<li>
-			<a href="https://timeline.zachiah.com"> Timeline of my life </a>
+			<a href="https://timeline.zachiah.com">Timeline of my life</a>
 		</li>
 		<li>
-			<a href="https://svelte-conways-game-of-life.netlify.app/"> Conway's Game of Life </a>
+			<a href="https://simon.zachiah.com">Simon (WIP)</a>
 		</li>
 		<li>
-			<a href="https://github.com/Zachiah/lots-of-langs"> lots-of-langs </a>
+			<a href="https://conway.zachiah.com">Conway's Game of Life</a>
 		</li>
 		<li>
-			<a href="https://github.com/Zachiah/taita"> Taita </a>
+			<a href="https://github.com/Zachiah/lots-of-langs">lots-of-langs</a>
+		</li>
+		<li>
+			<a href="https://github.com/Zachiah/taita">Taita</a>
 		</li>
 	</ul>
 
 	<h2>Tools I Use</h2>
 	<ul>
 		<li>
-			<a href="https://neovim.io/"> Neovim (BTW) </a>
+			<a href="https://neovim.io/">Neovim (BTW)</a>
 		</li>
 		<li>
-			<a href="https://github.com/tmux/tmux/wiki"> Tmux </a>
+			<a href="https://github.com/tmux/tmux/wiki">Tmux</a>
 		</li>
 		<li>
-			<a href="https://nixos.org/"> Nix & NixOS </a>
+			<a href="https://nixos.org/">Nix & NixOS</a>
 		</li>
 		<li>
-			<a href="https://swaywm.org/"> Sway </a>
+			<a href="https://swaywm.org/">Sway</a>
 		</li>
 		<li>
-			<a href="https://github.com/zachiah/taita"> Taita </a>
+			<a href="https://github.com/zachiah/taita">Taita</a>
 		</li>
 		<li>
-			<a href="https://alacritty.org/"> Alacritty </a>
+			<a href="https://alacritty.org/">Alacritty</a>
 		</li>
 	</ul>
 
@@ -79,6 +82,9 @@
 		</li>
 		<li>
 			<a href="https://www.python.org/">Python</a>
+		</li>
+		<li>
+			<a href="https://go.dev/">Golang</a>
 		</li>
 	</ul>
 
