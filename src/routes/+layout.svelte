@@ -67,10 +67,10 @@
 
 {#if !isTouchDevice}
 	<div
-		class="pointer-events-none fixed z-50 h-40 w-40 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-gray-200 bg-contain shadow-inner dark:bg-blue-500 {$page
+		class="pointer-events-none fixed z-50 h-40 w-40 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-contain shadow-inner {$page
 			.url.pathname === '/'
-			? 'mix-blend-difference'
-			: 'mix-blend-darken'}"
+			? 'bg-gray-200 dark:bg-blue-500 mix-blend-difference'
+			: 'bg-blue-500 mix-blend-lighten dark:mix-blend-darken'}"
 		style="top: {$mousePos.y}px; left: {$mousePos.x}px;"
 	/>
 {/if}

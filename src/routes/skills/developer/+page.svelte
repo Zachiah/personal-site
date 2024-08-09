@@ -8,40 +8,40 @@
 	description="My name is Zachiah Sawyer. I am a software engineer. Here are some links showing my skills and past experience."
 />
 
-<section class="flex min-h-[40rem] flex-col items-center justify-center gap-8 bg-black p-12">
+<section class="flex min-h-[40rem] flex-col items-center justify-center gap-8 bg-white dark:bg-black p-12">
 	<h1 class="text-4xl">Zachiah Sawyer | Software Engineer</h1>
 
-	<div class="flex text-slate-400 flex-wrap">
-		<a class="border-r border-white px-4" href="https://github.com/zachiah">GitHub</a>
-		<a class="border-r border-white px-4" href="https://stackoverflow.com/users/10892722/zachiah"
+	<div class="flex text-slate-800 dark:text-slate-400 flex-wrap">
+		<a class="border-r border-slate-400 dark:border-white px-4" href="https://github.com/zachiah">GitHub</a>
+		<a class="border-r border-slate-400 dark:border-white px-4" href="https://stackoverflow.com/users/10892722/zachiah"
 			>StackOverflow</a
 		>
-		<a class="border-r border-white px-4" href="https://profile.indeed.com/p/zachiahs-rjmh6x5"
+		<a class="border-r border-slate-400 dark:border-white px-4" href="https://profile.indeed.com/p/zachiahs-rjmh6x5"
 			>Resume</a
 		>
 		<a class="px-4" href="https://www.freelancer.com/u/zachiahsawyer">freelancer.com</a>
 	</div>
 </section>
 
-<section class="flex min-h-[40rem] flex-col items-center justify-center bg-slate-800 p-12">
+<section class="flex min-h-[40rem] flex-col items-center justify-center bg-slate-400 dark:bg-slate-800 p-12">
 	<h2 class="mb-24 text-center text-4xl">Some Personal Projects</h2>
 
 	<div class="flex w-full flex-wrap gap-12">
-		<a class="flex-1 rounded-md bg-black p-4" href="https://timeline.zachiah.com"
+		<a class="flex-1 rounded-md bg-white dark:bg-black p-4" href="https://timeline.zachiah.com"
 			>Timeline of my life</a
 		>
-		<a class="flex-1 rounded-md bg-black p-4" href="https://simon.zachiah.com">Simon (WIP)</a>
-		<a class="flex-1 rounded-md bg-black p-4" href="https://conway.zachiah.com"
+		<a class="flex-1 rounded-md bg-white dark:bg-black p-4" href="https://simon.zachiah.com">Simon (WIP)</a>
+		<a class="flex-1 rounded-md bg-white dark:bg-black p-4" href="https://conway.zachiah.com"
 			>Conway's Game of Life</a
 		>
-		<a class="flex-1 rounded-md bg-black p-4" href="https://github.com/Zachiah/lots-of-langs"
+		<a class="flex-1 rounded-md bg-white dark:bg-black p-4" href="https://github.com/Zachiah/lots-of-langs"
 			>lots-of-langs</a
 		>
-		<a class="flex-1 rounded-md bg-black p-4" href="https://github.com/Zachiah/taita">Taita</a>
+		<a class="flex-1 rounded-md bg-white dark:bg-black p-4" href="https://github.com/Zachiah/taita">Taita</a>
 	</div>
 </section>
 
-<section class="bg-black p-8">
+<section class="bg-white dark:bg-black p-8">
 	<div class="max-w-prose mx-auto">
 		<Content>
 			<h2>Tools I Use</h2>
