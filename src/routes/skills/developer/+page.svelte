@@ -71,37 +71,19 @@
 
 	<h2>Languages I have experience with</h2>
 	<ul>
-		<li>
-			<a href="https://rust-lang.org">Rust</a>
-		</li>
-		<li>
-			<a href="https://typescript-lang.org">TypeScript</a>
-		</li>
-		<li>
-			<a href="https://www.php.net/">PHP</a>
-		</li>
-		<li>
-			<a href="https://www.python.org/">Python</a>
-		</li>
-		<li>
-			<a href="https://go.dev/">Golang</a>
-		</li>
+		<li>Rust (1yr)</li>
+		<li>TypeScript (3-4yrs)</li>
+		<li>PHP (2yrs)</li>
+		<li>Python (3yrs)</li>
+		<li>Golang (1yr)</li>
 	</ul>
 
-	<h2>Languages I'm interested in mastering</h2>
+	<h2>Languages I haven't worked in much yet, but am interested in mastering</h2>
 	<ul>
-		<li>
-			<a href="https://rust-lang.org">Rust</a>
-		</li>
-		<li>
-			<a href="https://go.dev/">Go</a>
-		</li>
-		<li>
-			<a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a>
-		</li>
-		<li>
-			<a href="https://www.haskell.org">Haskell</a>
-		</li>
+		<li>C</li>
+		<li>Haskell</li>
+		<li>OCaml</li>
+		<li>Swift</li>
 	</ul>
 
 	<h2>About my development journey</h2>
