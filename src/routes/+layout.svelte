@@ -40,13 +40,20 @@
 
 <svelte:body
 	on:mousedown={(e) => {
-		const newId = id++;
-		circles.push({ color: colors[id % colors.length], id: newId, x: e.x, y: e.y + window.scrollY });
-		circles = circles;
+		if ($page.url.pathname === '') {
+			const newId = id++;
+			circles.push({
+				color: colors[id % colors.length],
+				id: newId,
+				x: e.x,
+				y: e.y + window.scrollY
+			});
+			circles = circles;
 
-		setTimeout(() => {
-			circles = circles.filter((c) => c.id !== newId);
-		}, 1000);
+			setTimeout(() => {
+				circles = circles.filter((c) => c.id !== newId);
+			}, 1000);
+		}
 	}}
 />
 
@@ -60,19 +67,38 @@
 
 {#if !isTouchDevice}
 	<div
-		class="pointer-events-none fixed z-50 h-40 w-40 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-gray-200 bg-contain mix-blend-difference shadow-inner dark:bg-blue-500"
+		class="pointer-events-none fixed z-50 h-40 w-40 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-contain shadow-inner {$page
+			.url.pathname === '/'
+			? 'bg-gray-200 dark:bg-blue-500 mix-blend-difference'
+			: 'bg-blue-500 mix-blend-lighten dark:mix-blend-darken'}"
 		style="top: {$mousePos.y}px; left: {$mousePos.x}px;"
 	/>
 {/if}
 
 {#if $page.url.pathname !== '/'}
-	<nav class="flex w-full max-w-[100vw] p-8 font-mono text-blue-800">
+	<nav class="absolute right-0 top-0 flex font-mono text-blue-800">
 		<a
 			href="/#links"
 			style="view-transition-name: fullname;"
-			class="ml-auto scale-100 transform rounded-lg bg-blue-200 p-4 shadow-lg shadow-blue-800 duration-200 hover:bg-blue-800 hover:text-gray-200 focus:bg-blue-800 focus:text-gray-200 active:scale-110"
-			>Zachiah Sawyer</a
+			class="ml-auto flex scale-100 transform gap-2 rounded-bl-lg bg-blue-200 p-4 shadow-lg shadow-blue-800 duration-200 hover:bg-blue-800 hover:text-gray-200 focus:bg-blue-800 focus:text-gray-200 active:scale-110"
 		>
+			<span> Zachiah&nbsp;Sawyer </span>
+
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width={1.5}
+				stroke="currentColor"
+				class="w-6"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25"
+				/>
+			</svg>
+		</a>
 	</nav>
 {/if}
 

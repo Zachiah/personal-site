@@ -1,6 +1,6 @@
 <script>
-	import Content from '$lib/components/Content.svelte';
 	import SEO from '$lib/components/SEO.svelte';
+	import SimplePageWrapper from '$lib/components/SimplePageWrapper.svelte';
 </script>
 
 <SEO
@@ -8,7 +8,7 @@
 	description="Hi my name is Zachiah Sawyer. This is my journey as a pianist."
 />
 
-<Content>
+<SimplePageWrapper>
 	<h1>I am an origamist</h1>
 
 	<p>
@@ -25,4 +25,4 @@
 		src="/images/geometric-collapse-1-back.webp"
 		alt="back of intricate geometric collapse origami creation"
 	/>
-</Content>
+</SimplePageWrapper>

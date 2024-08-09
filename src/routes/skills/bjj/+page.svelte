@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Content from '$lib/components/Content.svelte';
 	import SEO from '$lib/components/SEO.svelte';
+	import SimplePageWrapper from '$lib/components/SimplePageWrapper.svelte';
 </script>
 
 <SEO
@@ -8,7 +9,7 @@
 	description="Hi my name is Zachiah Sawyer. This is my BJJ journey"
 />
 
-<Content>
+<SimplePageWrapper>
 	<h1>Key points on my BJJ journey so far</h1>
 	<ul>
 		<li>
@@ -21,4 +22,4 @@
 			I started training at <a href="https://cdajiujitsu.com/">CDA Jiujitsu</a> in February 2024
 		</li>
 	</ul>
-</Content>
+</SimplePageWrapper>
