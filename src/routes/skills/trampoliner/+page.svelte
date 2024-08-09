@@ -1,6 +1,6 @@
 <script>
-	import Content from '$lib/components/Content.svelte';
 	import SEO from '$lib/components/SEO.svelte';
+	import SimplePageWrapper from '$lib/components/SimplePageWrapper.svelte';
 </script>
 
 <SEO
@@ -8,7 +8,7 @@
 	description="Hi my name is Zachiah Sawyer. This is my journey as a pianist."
 />
 
-<Content>
+<SimplePageWrapper>
 	<h1>I am a trampoliner</h1>
 
 	<p>
@@ -29,4 +29,4 @@
 			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
 		/>
 	</div>
-</Content>
+</SimplePageWrapper>
