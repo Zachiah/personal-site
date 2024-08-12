@@ -10,6 +10,7 @@
 />
 
 <SimplePageWrapper>
+	<img src="/bjj.webp" alt="Me at a tournament" />
 	<h1>Key points on my BJJ journey so far</h1>
 	<ul>
 		<li>
@@ -20,6 +21,10 @@
 
 		<li>
 			I started training at <a href="https://cdajiujitsu.com/">CDA Jiujitsu</a> in February 2024
+		</li>
+
+		<li>
+			I started training at <a href="https://graciebarra.com/hayden-id/">Gracie Barra Hayden</a> in July 2024
 		</li>
 	</ul>
 </SimplePageWrapper>

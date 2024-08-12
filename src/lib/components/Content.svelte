@@ -6,6 +6,9 @@
 	div :global(h1) {
 		@apply mb-2 text-center text-4xl;
 	}
+	div :global(h1:not(:first-child)) {
+		@apply mt-6;
+	}
 
 	div :global(h2:not(:first-child)) {
 		@apply mt-6;
@@ -32,5 +35,9 @@
 
 	div :global(.spaced li) {
 		@apply mb-4;
+	}
+
+	div :global(img) {
+		@apply rounded-md;
 	}
 </style>
