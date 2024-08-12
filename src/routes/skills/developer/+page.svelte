@@ -77,9 +77,8 @@
 			<a class="border-r border-slate-200 px-4 dark:border-white" href="tel:+13603699991"
 				>(360) 369-9991</a
 			>
-			<a
-				class="border-r border-slate-200 px-4 dark:border-white"
-				href="mailto:zachiah@proton.me">zachiah@proton.me</a
+			<a class="border-r border-slate-200 px-4 dark:border-white" href="mailto:zachiah@proton.me"
+				>zachiah@proton.me</a
 			>
 			<a class="border-r border-slate-200 px-4 dark:border-white" href="https://github.com/zachiah"
 				>GitHub</a
@@ -90,7 +89,8 @@
 			>
 			<a
 				class="border-r border-slate-200 px-4 dark:border-white"
-				href="/resume-trimmed.pdf" download="zachiah-sawyer-resume.pdf">Resume</a
+				href="/resume-trimmed.pdf"
+				download="zachiah-sawyer-resume.pdf">Resume</a
 			>
 			<a class="px-4" href="https://www.freelancer.com/u/zachiahsawyer">freelancer.com</a>
 		</div>
@@ -141,7 +141,9 @@
 </section>
 
 <section class="flex flex-wrap gap-8 bg-slate-200 p-8 dark:bg-slate-800">
-	<div class="shadow-md dark:shadow-none flex-1 rounded-md bg-white p-4 dark:bg-black xs:min-w-[18rem]">
+	<div
+		class="flex-1 rounded-md bg-white p-4 shadow-md dark:bg-black dark:shadow-none xs:min-w-[18rem]"
+	>
 		<Content>
 			<h2>Development Tools I Use</h2>
 			<ul>
@@ -167,7 +169,9 @@
 		</Content>
 	</div>
 
-	<div class="shadow-md dark:shadow-none flex-1 rounded-md bg-white p-4 dark:bg-black xs:min-w-[18rem]">
+	<div
+		class="flex-1 rounded-md bg-white p-4 shadow-md dark:bg-black dark:shadow-none xs:min-w-[18rem]"
+	>
 		<Content>
 			<h2>Language experience</h2>
 			<ul>
@@ -180,7 +184,9 @@
 		</Content>
 	</div>
 
-	<div class="shadow-md dark:shadow-none flex-1 rounded-md bg-white p-4 dark:bg-black xs:min-w-[18rem]">
+	<div
+		class="flex-1 rounded-md bg-white p-4 shadow-md dark:bg-black dark:shadow-none xs:min-w-[18rem]"
+	>
 		<Content>
 			<h2>Really want to learn</h2>
 			<ul>
@@ -203,9 +209,28 @@
 				there was a section on programming a raspberry pi using python so I decided to get a
 				raspberry pi and start with that. Before I knew it I was more into programming then
 				electrical engineering. After that I continued learning many different programming
-				languages, frameworks, tools, and such over the years. I made my first money programming in
-				October 2019 through{' '}<a href="https://freelancer.com">Freelancer</a>. I started working
-				for <a href="https://www.cloudone.com">CloudOne</a> in May of 2023.
+				languages, frameworks, tools, and such over the years.
+			</p>
+
+			<p>
+				I started freelancing in October 2019 and I’ve continued freelancing up until now. I have
+				had the opportunity to work for various individuals and companies and in so doing to work on
+				a myriad of different things including frontends, backends, web scrapers, and data
+				visualizations.
+			</p>
+
+			<p>
+				In May of 2023 I started working for CloudOne (an omnichannel digital marketing company) in
+				Vancouver WA. I worked there for just under a year until I moved to Idaho and had to end
+				that engagement. In this role I worked as a Full Stack Software Developer. My day to day
+				involved updating APIs written in PHP, rewriting and patching legacy PHP code, writing new
+				sites in modern stacks and implementing features for the company backend interface as they
+				were needed.
+			</p>
+
+			<p>
+				I am currently actively searching for a job in software. If you think I'd be a good fit for
+				your company please contact me at <a href="tel:+13603699991">(360) 369-9991</a>.
 			</p>
 
 			<h2>About my approach to software development</h2>
