@@ -1,6 +1,63 @@
 <script>
 	import Content from '$lib/components/Content.svelte';
 	import SEO from '$lib/components/SEO.svelte';
+
+	const tools = [
+		'JavaScript',
+		'TypeScript',
+		'Python',
+		'Ruby',
+		'Golang',
+		'Rust',
+		'PHP',
+		'Git',
+		'Node.js',
+		'Jest',
+		'Vitest',
+		'Playwright',
+		'Webpack',
+		'Rollup',
+		'Vite',
+		'Esbuild',
+		'HTML',
+		'ReactJS',
+		'SvelteJS',
+		'VueJS',
+		'SolidJS',
+		'jQuery',
+		'RxJS',
+		'Socket.io',
+		'HTMX',
+		'CSS',
+		'TailwindCSS',
+		'WindiCSS',
+		'UnoCSS',
+		'CSS Modules',
+		'Bootstrap',
+		'Bulma',
+		'MaterializeCSS',
+		'Vuetify',
+		'Quasar',
+		'Material UI',
+		'Flask',
+		'Django',
+		'Ruby on Rails',
+		'Laravel',
+		'Actix web',
+		'Axum',
+		'Wordpress',
+		'Express',
+		'Koa',
+		'Matplotlib',
+		'Prisma',
+		'Firebase',
+		'Supabase',
+		'MySQL',
+		'MariaDB',
+		'PostgreSQL',
+		'Azure',
+		'Twilio Flex'
+	];
 </script>
 
 <SEO
@@ -8,43 +65,75 @@
 	description="My name is Zachiah Sawyer. I am a software engineer. Here are some links showing my skills and past experience."
 />
 
-<section class="flex min-h-[40rem] flex-col items-center justify-center gap-8 bg-white dark:bg-black p-12">
-	<h1 class="text-4xl">Zachiah Sawyer | Software Engineer</h1>
+<section
+	class="flex min-h-[40rem] flex-wrap-reverse items-center justify-center gap-8 bg-white p-12 dark:bg-black"
+>
+	<img src="/pfp2.webp" alt="Zachiah Sawyer" class="max-h-[50vh] rounded-md shadow-md" />
+	<div class="flex flex-col gap-8">
+		<h1 class="mt-16 px-4 text-4xl">Zachiah Sawyer | Software Engineer</h1>
 
-	<div class="flex text-slate-800 dark:text-slate-400 flex-wrap">
-		<a class="border-r border-slate-400 dark:border-white px-4" href="https://github.com/zachiah">GitHub</a>
-		<a class="border-r border-slate-400 dark:border-white px-4" href="https://stackoverflow.com/users/10892722/zachiah"
-			>StackOverflow</a
-		>
-		<a class="border-r border-slate-400 dark:border-white px-4" href="https://profile.indeed.com/p/zachiahs-rjmh6x5"
-			>Resume</a
-		>
-		<a class="px-4" href="https://www.freelancer.com/u/zachiahsawyer">freelancer.com</a>
+		<div class="flex flex-wrap text-slate-800 dark:text-slate-200">
+			<a class="border-r border-slate-200 px-4 dark:border-white" href="https://github.com/zachiah"
+				>GitHub</a
+			>
+			<a
+				class="border-r border-slate-200 px-4 dark:border-white"
+				href="https://stackoverflow.com/users/10892722/zachiah">StackOverflow</a
+			>
+			<a
+				class="border-r border-slate-200 px-4 dark:border-white"
+				href="https://profile.indeed.com/p/zachiahs-rjmh6x5">Resume</a
+			>
+			<a class="px-4" href="https://www.freelancer.com/u/zachiahsawyer">freelancer.com</a>
+		</div>
 	</div>
 </section>
 
-<section class="flex min-h-[40rem] flex-col items-center justify-center bg-slate-400 dark:bg-slate-800 p-12">
+<section
+	class="flex min-h-[40rem] flex-col items-center justify-center bg-slate-200 p-12 dark:bg-slate-800"
+>
 	<h2 class="mb-24 text-center text-4xl">Some Personal Projects</h2>
 
 	<div class="flex w-full flex-wrap gap-12">
-		<a class="flex-1 rounded-md bg-white dark:bg-black p-4" href="https://timeline.zachiah.com"
+		<a class="flex-1 rounded-md bg-white p-4 dark:bg-black" href="/">This website</a>
+
+		<a class="flex-1 rounded-md bg-white p-4 dark:bg-black" href="https://timeline.zachiah.com"
 			>Timeline of my life</a
 		>
-		<a class="flex-1 rounded-md bg-white dark:bg-black p-4" href="https://simon.zachiah.com">Simon (WIP)</a>
-		<a class="flex-1 rounded-md bg-white dark:bg-black p-4" href="https://conway.zachiah.com"
+		<a class="flex-1 rounded-md bg-white p-4 dark:bg-black" href="https://simon.zachiah.com"
+			>Simon (WIP)</a
+		>
+		<a class="flex-1 rounded-md bg-white p-4 dark:bg-black" href="https://conway.zachiah.com"
 			>Conway's Game of Life</a
 		>
-		<a class="flex-1 rounded-md bg-white dark:bg-black p-4" href="https://github.com/Zachiah/lots-of-langs"
-			>lots-of-langs</a
+		<a
+			class="flex-1 rounded-md bg-white p-4 dark:bg-black"
+			href="https://github.com/Zachiah/lots-of-langs">lots-of-langs</a
 		>
-		<a class="flex-1 rounded-md bg-white dark:bg-black p-4" href="https://github.com/Zachiah/taita">Taita</a>
+		<a class="flex-1 rounded-md bg-white p-4 dark:bg-black" href="https://github.com/Zachiah/taita"
+			>Taita</a
+		>
 	</div>
 </section>
 
-<section class="bg-white dark:bg-black p-8">
-	<div class="max-w-prose mx-auto">
+<section
+	class="flex min-h-[40rem] flex-col items-center justify-center bg-white p-12 dark:bg-black"
+>
+	<h2 class="mb-24 text-center text-4xl">
+		Long list of technologies I have experience with (incomplete)
+	</h2>
+
+	<ul class="flex flex-wrap gap-4 max-h-[50vh] overflow-auto w-auto shadow-inner shadow-white p-4 rounded-md">
+		{#each tools as tool}
+			<li class="w-full 2xs:w-auto rounded-md bg-slate-200 px-4 py-2 dark:bg-slate-600">{tool}</li>
+		{/each}
+	</ul>
+</section>
+
+<section class="flex bg-slate-200 p-8 dark:bg-slate-800 gap-8 flex-wrap">
+	<div class="flex-1 bg-white dark:bg-black p-4 rounded-md xs:min-w-[18rem]">
 		<Content>
-			<h2>Tools I Use</h2>
+			<h2>Development Tools I Use</h2>
 			<ul>
 				<li>
 					<a href="https://neovim.io/">Neovim (BTW)</a>
@@ -65,8 +154,12 @@
 					<a href="https://alacritty.org/">Alacritty</a>
 				</li>
 			</ul>
+		</Content>
+	</div>
 
-			<h2>Languages I have experience with</h2>
+	<div class="flex-1 bg-white dark:bg-black p-4 rounded-md xs:min-w-[18rem]">
+		<Content>
+			<h2>Language experience</h2>
 			<ul>
 				<li>Rust (1yr)</li>
 				<li>TypeScript (3-4yrs)</li>
@@ -74,15 +167,25 @@
 				<li>Python (3yrs)</li>
 				<li>Golang (1yr)</li>
 			</ul>
+		</Content>
+	</div>
 
-			<h2>Languages I haven't worked in much yet, but am interested in mastering</h2>
+	<div class="flex-1 bg-white dark:bg-black p-4 rounded-md xs:min-w-[18rem]">
+		<Content>
+			<h2>Really want to learn</h2>
 			<ul>
 				<li>C</li>
 				<li>Haskell</li>
 				<li>OCaml</li>
 				<li>Swift</li>
 			</ul>
+		</Content>
+	</div>
+</section>
 
+<section class="bg-white p-8 dark:bg-black">
+	<div class="mx-auto max-w-prose">
+		<Content>
 			<h2>About my development journey</h2>
 			<p>
 				As far as I can tell, I started programming in March 2018. There was a book at the library

@@ -7,8 +7,11 @@
 		@apply mb-2 text-center text-4xl;
 	}
 
+	div :global(h2:not(:first-child)) {
+		@apply mt-6;
+	}
 	div :global(h2) {
-		@apply mt-6 text-2xl;
+		@apply text-2xl;
 	}
 
 	div :global(ul) {
