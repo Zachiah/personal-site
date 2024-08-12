@@ -19,8 +19,8 @@
 			<div class="rounded-lg bg-sky-500 bg-gradient-to-br from-sky-500 to-green-800">
 				<img
 					class="h-72 w-auto rounded-lg object-contain opacity-60 shadow-lg duration-200 hover:opacity-100"
-					width="400"
-					height="400"
+					width="463"
+					height="618"
 					src="/pfp2.webp"
 					alt="Zachiah Sawyer"
 				/>

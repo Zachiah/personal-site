@@ -10,7 +10,7 @@
 />
 
 <SimplePageWrapper>
-	<img src="/bjj.webp" alt="Me at a tournament" />
+	<img src="/bjj.webp" alt="Me at a tournament" width="600" height="400" />
 	<h1>Key points on my BJJ journey so far</h1>
 	<ul>
 		<li>
