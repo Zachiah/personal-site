@@ -90,7 +90,7 @@
 			>
 			<a
 				class="border-r border-slate-200 px-4 dark:border-white"
-				href="https://profile.indeed.com/p/zachiahs-rjmh6x5">Resume</a
+				href="/resume-trimmed.pdf" download="zachiah-sawyer-resume.pdf">Resume</a
 			>
 			<a class="px-4" href="https://www.freelancer.com/u/zachiahsawyer">freelancer.com</a>
 		</div>
