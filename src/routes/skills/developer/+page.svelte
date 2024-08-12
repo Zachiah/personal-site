@@ -68,7 +68,7 @@
 <section
 	class="flex min-h-[40rem] flex-wrap-reverse items-center justify-center gap-8 bg-white p-12 dark:bg-black"
 >
-	<img src="/pfp2.webp" alt="Zachiah Sawyer" class="max-h-[50vh] rounded-md shadow-lg" width="463" height="618" />
+	<img src="/pfp2.webp" alt="Zachiah Sawyer" class="max-h-[50vh] rounded-md shadow-lg w-auto" width="463" height="618" />
 
 	<div class="flex flex-col gap-8">
 		<h1 class="mt-16 px-4 text-4xl">Zachiah Sawyer | Software Engineer</h1>
