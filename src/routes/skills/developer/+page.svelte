@@ -68,11 +68,19 @@
 <section
 	class="flex min-h-[40rem] flex-wrap-reverse items-center justify-center gap-8 bg-white p-12 dark:bg-black"
 >
-	<img src="/pfp2.webp" alt="Zachiah Sawyer" class="max-h-[50vh] rounded-md shadow-md" />
+	<img src="/pfp2.webp" alt="Zachiah Sawyer" class="max-h-[50vh] rounded-md shadow-lg" />
+
 	<div class="flex flex-col gap-8">
 		<h1 class="mt-16 px-4 text-4xl">Zachiah Sawyer | Software Engineer</h1>
 
 		<div class="flex flex-wrap text-slate-800 dark:text-slate-200">
+			<a class="border-r border-slate-200 px-4 dark:border-white" href="tel:+13603699991"
+				>(360) 369-9991</a
+			>
+			<a
+				class="border-r border-slate-200 px-4 dark:border-white"
+				href="mailto:zachiah@proton.me">zachiah@proton.me</a
+			>
 			<a class="border-r border-slate-200 px-4 dark:border-white" href="https://github.com/zachiah"
 				>GitHub</a
 			>
@@ -123,15 +131,17 @@
 		Long list of technologies I have experience with (incomplete)
 	</h2>
 
-	<ul class="flex flex-wrap gap-4 max-h-[50vh] overflow-auto w-auto shadow-inner shadow-white p-4 rounded-md">
+	<ul
+		class="flex max-h-[50vh] w-auto flex-wrap gap-4 overflow-auto rounded-md p-4 shadow-inner shadow-white"
+	>
 		{#each tools as tool}
-			<li class="w-full 2xs:w-auto rounded-md bg-slate-200 px-4 py-2 dark:bg-slate-600">{tool}</li>
+			<li class="w-full rounded-md bg-slate-200 px-4 py-2 dark:bg-slate-600 2xs:w-auto">{tool}</li>
 		{/each}
 	</ul>
 </section>
 
-<section class="flex bg-slate-200 p-8 dark:bg-slate-800 gap-8 flex-wrap">
-	<div class="flex-1 bg-white dark:bg-black p-4 rounded-md xs:min-w-[18rem]">
+<section class="flex flex-wrap gap-8 bg-slate-200 p-8 dark:bg-slate-800">
+	<div class="shadow-md dark:shadow-none flex-1 rounded-md bg-white p-4 dark:bg-black xs:min-w-[18rem]">
 		<Content>
 			<h2>Development Tools I Use</h2>
 			<ul>
@@ -157,7 +167,7 @@
 		</Content>
 	</div>
 
-	<div class="flex-1 bg-white dark:bg-black p-4 rounded-md xs:min-w-[18rem]">
+	<div class="shadow-md dark:shadow-none flex-1 rounded-md bg-white p-4 dark:bg-black xs:min-w-[18rem]">
 		<Content>
 			<h2>Language experience</h2>
 			<ul>
@@ -170,7 +180,7 @@
 		</Content>
 	</div>
 
-	<div class="flex-1 bg-white dark:bg-black p-4 rounded-md xs:min-w-[18rem]">
+	<div class="shadow-md dark:shadow-none flex-1 rounded-md bg-white p-4 dark:bg-black xs:min-w-[18rem]">
 		<Content>
 			<h2>Really want to learn</h2>
 			<ul>
