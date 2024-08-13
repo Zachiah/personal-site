@@ -92,41 +92,45 @@
 <slot />
 
 <style>
-	@keyframes fade-in {
+	@keyframes rotate-in {
 		from {
+			transform: translateX(120vw);
 			opacity: 0;
 		}
-	}
-
-	@keyframes fade-out {
-		to {
+		33% {
+			scale: 0.5;
+			transform: translateX(120vw);
 			opacity: 0;
 		}
-	}
-
-	@keyframes scale-in {
-		from {
-			transform: scale(0) translate(-40px, -40px);
-			filter: grayscale(1);
+		66% {
+			scale: 0.5;
+			transform: translateX(0);
 		}
 	}
 
-	@keyframes scale-out {
+	@keyframes rotate-out {
+		33% {
+			scale: 0.5;
+			transform: translateX(0);
+			opacity: 1;
+		}
+		66% {
+			scale: 0.5;
+			transform: translateX(-120vw) rotate(360deg);
+		}
 		to {
-			transform: scale(0) translate(-40px, -40px);
-			filter: grayscale(1);
+			transform: translateX(-120vw) rotate(200deg);
+			opacity: 0;
 		}
 	}
 
 	:root::view-transition-old(root) {
 		animation:
-			90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
-			300ms cubic-bezier(0.4, 0, 0.2, 1) both scale-out;
+			2000ms cubic-bezier(0.4, 0, 0.2, 1) both rotate-out;
 	}
 
 	:root::view-transition-new(root) {
 		animation:
-			210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
-			300ms cubic-bezier(0.4, 0, 0.2, 1) both scale-in;
+			2000ms cubic-bezier(0.4, 0, 0.2, 1) both rotate-in;
 	}
 </style>
