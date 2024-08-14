@@ -41,8 +41,11 @@
 		@apply rounded-md;
 	}
 
-
 	div :global(li::marker) {
 		content: "• "
+	}
+
+	div :global(figure) {
+		@apply mt-8 flex flex-col gap-4 rounded-md bg-gray-200 p-4 shadow-sm dark:bg-slate-900 dark:shadow-white;
 	}
 </style>
