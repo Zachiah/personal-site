@@ -11,11 +11,20 @@
 		<div
 			class="flex flex-col flex-wrap gap-2 font-mono text-2xl text-gray-800 dark:text-gray-200 2xs:gap-16 2xs:p-4 sm:flex-row sm:text-4xl"
 		>
-			<h1
-				class="flex h-72 flex-1 items-center justify-center whitespace-normal rounded-lg bg-sky-950 bg-gradient-to-br from-sky-950 to-green-500 px-2 py-10 text-center font-mono text-2xl shadow-lg 2xs:text-4xl xs:p-20 sm:text-6xl text-white"
+			<div
+					class="flex flex-col gap-6 h-72 flex-1 items-center justify-center whitespace-normal rounded-lg bg-sky-950 bg-gradient-to-br from-sky-950 to-green-500 px-2 py-10 text-center font-mono shadow-lg xs:p-20 text-white"
 			>
-				Zachiah Sawyer
-			</h1>
+				<h1 class="text-2xl 2xs:text-4xl sm:text-6xl"
+				>
+					Zachiah Sawyer
+				</h1>
+				<div class="flex gap-6 flex-wrap items-center justify-center">
+					<a class="text-lg md:whitespace-nowrap" href="tel://+13603699991"><span class="icon-[heroicons--phone]"></span> (360) 369-9991</a>
+
+					<a class="text-lg md:whitespace-nowrap" href="mailto://zachiah@proton.me"> zachiah@proton.me</a>
+				</div>
+			</div>
+
 			<div class="rounded-lg bg-sky-500 bg-gradient-to-br from-sky-500 to-green-800">
 				<img
 					class="h-72 w-auto rounded-lg object-contain opacity-60 shadow-lg duration-200 hover:opacity-100"
