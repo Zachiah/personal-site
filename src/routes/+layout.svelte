@@ -21,8 +21,16 @@
 		});
 	});
 
+	let canvas: HTMLCanvasElement = null;
+	let ctx: CanvasRenderingContext2d;
+
 	let mounted = false;
-	onMount(() => (mounted = true));
+	onMount(() => {
+		ctx = canvas.getContext('2d');
+		mounted = true;
+
+		console.log(canvas);
+	});
 
 	let mousePos = spring({ x: -80, y: -80 }, { stiffness: 0.1, damping: 0.2 });
 	$: isTouchDevice = mounted && window.matchMedia('(pointer: coarse)').matches;
@@ -30,11 +38,34 @@
 	let id = 0;
 	let circles: { color: string; id: number; x: number; y: number }[] = [];
 	const colors = ['bg-blue-500', 'bg-red-500', 'bg-green-500', 'bg-purple-500', 'bg-orange-500'];
+
+	let windowWidth = 1600;
+	let windowHeight = 900;
+
+	let hue = Math.floor(Math.random() * 256);
 </script>
 
 <svelte:window
+	bind:innerWidth={windowWidth}
+	bind:innerHeight={windowHeight}
 	on:mousemove={throttle((e) => {
 		$mousePos = { x: e.x, y: e.y };
+
+	    hue = (hue + 1) % 256;
+
+	    ctx.fillStyle = `hsla(${hue}, 50%, 50%, 0.2)`;
+
+		const squareSize = 30;
+
+		const quantizedX = e.x - e.x % squareSize;
+		const quantizedY = e.y - e.y % squareSize;
+
+
+	    ctx.fillRect(quantizedX, quantizedY, squareSize, squareSize);
+
+		setTimeout(() => {
+			ctx.clearRect(quantizedX, quantizedY, squareSize, squareSize);
+		}, 500);
 	})}
 />
 
@@ -57,23 +88,6 @@
 	}}
 />
 
-{#each circles as circle (circle.id)}
-	<div
-		transition:fade
-		class="pointer-events-none absolute z-50 h-40 w-40 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-contain mix-blend-difference shadow-inner {circle.color}"
-		style="top: {circle.y}px; left: {circle.x}px;"
-	/>
-{/each}
-
-{#if !isTouchDevice}
-	<div
-		class="pointer-events-none fixed z-50 h-40 w-40 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-contain shadow-inner {$page
-			.url.pathname === '/'
-			? 'bg-gray-200 dark:bg-blue-500 mix-blend-difference'
-			: 'bg-blue-500 mix-blend-lighten dark:mix-blend-darken'}"
-		style="top: {$mousePos.y}px; left: {$mousePos.x}px;"
-	/>
-{/if}
 
 {#if $page.url.pathname !== '/'}
 	<nav class="absolute right-0 top-0 flex font-mono text-blue-800">
@@ -90,6 +104,9 @@
 {/if}
 
 <slot />
+
+
+<canvas width={windowWidth} height={windowHeight} bind:this={canvas} class="fixed top-0 left-0 right-0 bottom-0 z-40 w-screen h-screen pointer-events-none"></canvas>
 
 <style>
 	@keyframes fade-in {
