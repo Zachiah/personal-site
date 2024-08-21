@@ -18,10 +18,10 @@
 				>
 					Zachiah Sawyer
 				</h1>
-				<div class="flex gap-6 flex-wrap items-center justify-center">
-					<a class="text-lg md:whitespace-nowrap" href="tel:+13603699991"><span class="icon-[heroicons--phone]"></span> (360) 369-9991</a>
+				<div class="flex flex-col gap-2 flex-wrap items-center justify-center">
+					<a class="text-lg hover:underline md:whitespace-nowrap flex items-center gap-2" href="tel:+13603699991"><span class="icon-[heroicons--phone]"></span> (360) 369-9991</a>
 
-					<a class="text-lg md:whitespace-nowrap" href="mailto:zachiah@proton.me"> zachiah@proton.me</a>
+					<a class="text-lg hover:underline md:whitespace-nowrap flex items-center gap-2" href="mailto:zachiah@proton.me"><span class="icon-[heroicons--envelope]"></span> zachiah@proton.me</a>
 				</div>
 			</div>
 
