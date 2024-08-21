@@ -19,9 +19,9 @@
 					Zachiah Sawyer
 				</h1>
 				<div class="flex gap-6 flex-wrap items-center justify-center">
-					<a class="text-lg md:whitespace-nowrap" href="tel://+13603699991"><span class="icon-[heroicons--phone]"></span> (360) 369-9991</a>
+					<a class="text-lg md:whitespace-nowrap" href="tel:+13603699991"><span class="icon-[heroicons--phone]"></span> (360) 369-9991</a>
 
-					<a class="text-lg md:whitespace-nowrap" href="mailto://zachiah@proton.me"> zachiah@proton.me</a>
+					<a class="text-lg md:whitespace-nowrap" href="mailto:zachiah@proton.me"> zachiah@proton.me</a>
 				</div>
 			</div>
 
