@@ -11,6 +11,8 @@
 		'Rust',
 		'PHP',
 		'Git',
+		'GitHub',
+		'GitHub Actions',
 		'Node.js',
 		'Jest',
 		'Vitest',
@@ -56,7 +58,21 @@
 		'MariaDB',
 		'PostgreSQL',
 		'Azure',
-		'Twilio Flex'
+		'Twilio Flex',
+		'Linux',
+		'Debian',
+		'Ubuntu',
+		'Amazon Linux',
+		'Amaon EC2',
+		'NixOS',
+		'Nix',
+		'Arch Linux',
+		'MacOS',
+		'Homebrew',
+		'Bash',
+		'Zsh',
+		'Docker',
+		'Docker Compose',
 	];
 </script>
 
