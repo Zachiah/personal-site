@@ -196,6 +196,7 @@
 				<li>PHP (2yrs)</li>
 				<li>Python (3yrs)</li>
 				<li>Golang (1yr)</li>
+				<li>Ruby (1yr)</li>
 			</ul>
 		</Content>
 	</div>
