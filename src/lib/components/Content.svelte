@@ -40,4 +40,9 @@
 	div :global(img) {
 		@apply rounded-md;
 	}
+
+
+	div :global(li::marker) {
+		content: "• "
+	}
 </style>
