@@ -84,31 +84,31 @@
 <section
 	class="flex min-h-[40rem] flex-wrap-reverse items-center justify-center gap-8 bg-white p-12 dark:bg-black"
 >
-	<img src="/pfp2.webp" alt="Zachiah Sawyer" class="max-h-[50vh] rounded-md shadow-lg w-auto" width="463" height="618" />
+	<img src="/pfp2.webp" alt="Zachiah Sawyer" class="max-h-[50vh] rounded-md shadow-lg w-auto" style="aspect-ratio: 3/4" width="463" height="618" />
 
 	<div class="flex flex-col gap-8">
 		<h1 class="mt-16 px-4 text-4xl">Zachiah Sawyer | Software Engineer</h1>
 
 		<div class="flex flex-wrap text-slate-800 dark:text-slate-200">
-			<a class="border-r border-slate-200 px-4 dark:border-white" href="tel:+13603699991"
+			<a class="font-mono border-r border-slate-200 px-4 dark:border-white" href="tel:+13603699991"
 				>(360) 369-9991</a
 			>
-			<a class="border-r border-slate-200 px-4 dark:border-white" href="mailto:zachiah@proton.me"
+			<a class="font-mono border-r border-slate-200 px-4 dark:border-white w-[17ch] box-content" href="mailto:zachiah@proton.me"
 				>zachiah@proton.me</a
 			>
-			<a class="border-r border-slate-200 px-4 dark:border-white" href="https://github.com/zachiah"
+			<a class="font-mono border-r border-slate-200 px-4 dark:border-white" href="https://github.com/zachiah"
 				>GitHub</a
 			>
 			<a
-				class="border-r border-slate-200 px-4 dark:border-white"
+				class="font-mono border-r border-slate-200 px-4 dark:border-white"
 				href="https://stackoverflow.com/users/10892722/zachiah">StackOverflow</a
 			>
 			<a
-				class="border-r border-slate-200 px-4 dark:border-white"
+				class="font-mono border-r border-slate-200 px-4 dark:border-white"
 				href="/resume-trimmed.pdf"
 				download="zachiah-sawyer-resume.pdf">Resume</a
 			>
-			<a class="px-4" href="https://www.freelancer.com/u/zachiahsawyer">freelancer.com</a>
+			<a class="font-mono px-4" href="https://www.freelancer.com/u/zachiahsawyer">freelancer.com</a>
 		</div>
 	</div>
 </section>
