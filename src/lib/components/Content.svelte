@@ -30,7 +30,7 @@
 	}
 
 	div :global(p) {
-		@apply my-4;
+		@apply my-4 text-justify;
 	}
 
 	div :global(.spaced li) {
