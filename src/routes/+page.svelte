@@ -12,16 +12,20 @@
 			class="flex flex-col flex-wrap gap-2 font-mono text-2xl text-gray-800 dark:text-gray-200 2xs:gap-16 2xs:p-4 sm:flex-row sm:text-4xl"
 		>
 			<div
-					class="flex flex-col gap-6 h-72 flex-1 items-center justify-center whitespace-normal rounded-lg bg-sky-950 bg-gradient-to-br from-sky-950 to-green-500 px-2 py-10 text-center font-mono shadow-lg xs:p-20 text-white"
+				class="flex h-72 flex-1 flex-col items-center justify-center gap-6 whitespace-normal rounded-lg bg-sky-950 bg-gradient-to-br from-sky-950 to-green-500 px-2 py-10 text-center font-mono text-white shadow-lg xs:p-20"
 			>
-				<h1 class="text-2xl 2xs:text-4xl sm:text-6xl"
-				>
-					Zachiah Sawyer
-				</h1>
-				<div class="flex flex-col gap-2 flex-wrap items-center justify-center">
-					<a class="text-lg hover:underline md:whitespace-nowrap flex items-center gap-2" href="tel:+13603699991"><span class="icon-[heroicons--phone]"></span> (360) 369-9991</a>
+				<h1 class="text-2xl 2xs:text-4xl sm:text-6xl">Zachiah Sawyer</h1>
+				<div class="flex flex-col flex-wrap items-center justify-center gap-2">
+					<a
+						class="flex items-center gap-2 text-lg hover:underline md:whitespace-nowrap"
+						href="tel:+13603699991"><span class="icon-[heroicons--phone]"></span> (360) 369-9991</a
+					>
 
-					<a class="text-lg hover:underline md:whitespace-nowrap flex items-center gap-2" href="mailto:zachiah@proton.me"><span class="icon-[heroicons--envelope]"></span> zachiah@proton.me</a>
+					<a
+						class="flex items-center gap-2 text-lg hover:underline md:whitespace-nowrap"
+						href="mailto:zachiah@proton.me"
+						><span class="icon-[heroicons--envelope]"></span> zachiah@proton.me</a
+					>
 				</div>
 			</div>
 
@@ -39,7 +43,11 @@
 				text="Software Engineer"
 				colors="bg-sky-950 from-sky-950 to-green-800 text-white"
 			/>
-			<Skill url="/skills/pianist" text="Pianist" colors="bg-sky-500 from-sky-500 to-green-800 text-white" />
+			<Skill
+				url="/skills/pianist"
+				text="Pianist"
+				colors="bg-sky-500 from-sky-500 to-green-800 text-white"
+			/>
 			<Skill
 				url="/skills/bjj"
 				text="Jiujitsu Practitioner"

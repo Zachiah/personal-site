@@ -41,8 +41,7 @@
 		@apply rounded-md;
 	}
 
-
 	div :global(li::marker) {
-		content: "• "
+		content: '• ';
 	}
 </style>

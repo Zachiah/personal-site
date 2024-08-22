@@ -14,9 +14,7 @@ const config = {
 		}
 	},
 
-	plugins: [
-		addDynamicIconSelectors(),
-	]
+	plugins: [addDynamicIconSelectors()]
 };
 
 module.exports = config;
