@@ -5,35 +5,30 @@
 	import { spring } from 'svelte/motion';
 	import { onMount } from 'svelte';
 	import throttle from 'lodash.throttle';
-	import { fade } from 'svelte/transition';
+	import { assertIsDefined } from '$lib/assert';
 
 	onNavigate((navigation) => {
 		circles = [];
 
-		const d = document as any as { startViewTransition: (fn: () => Promise<void>) => void };
-		if (!d.startViewTransition) return;
+		if (!document.startViewTransition) return;
 
 		return new Promise((resolve) => {
-			d.startViewTransition(async () => {
+			document.startViewTransition(async () => {
 				resolve();
 				await navigation.complete;
 			});
 		});
 	});
 
-	let canvas: HTMLCanvasElement = null;
-	let ctx: CanvasRenderingContext2d;
+	let canvas: HTMLCanvasElement | null = null;
+	let ctx: CanvasRenderingContext2D | null = null;
 
-	let mounted = false;
 	onMount(() => {
+		assertIsDefined(canvas);
 		ctx = canvas.getContext('2d');
-		mounted = true;
-
-		console.log(canvas);
 	});
 
 	let mousePos = spring({ x: -80, y: -80 }, { stiffness: 0.1, damping: 0.2 });
-	$: isTouchDevice = mounted && window.matchMedia('(pointer: coarse)').matches;
 
 	let id = 0;
 	let circles: { color: string; id: number; x: number; y: number }[] = [];
@@ -51,19 +46,20 @@
 	on:mousemove={throttle((e) => {
 		$mousePos = { x: e.x, y: e.y };
 
-	    hue = (hue + 1) % 256;
+		hue = (hue + 1) % 256;
 
-	    ctx.fillStyle = `hsla(${hue}, 50%, 50%, 0.2)`;
+		assertIsDefined(ctx);
+		ctx.fillStyle = `hsla(${hue}, 50%, 50%, 0.2)`;
 
 		const squareSize = 30;
 
-		const quantizedX = e.x - e.x % squareSize;
-		const quantizedY = e.y - e.y % squareSize;
+		const quantizedX = e.x - (e.x % squareSize);
+		const quantizedY = e.y - (e.y % squareSize);
 
-
-	    ctx.fillRect(quantizedX, quantizedY, squareSize, squareSize);
+		ctx.fillRect(quantizedX, quantizedY, squareSize, squareSize);
 
 		setTimeout(() => {
+			assertIsDefined(ctx);
 			ctx.clearRect(quantizedX, quantizedY, squareSize, squareSize);
 		}, 500);
 	})}
@@ -88,7 +84,6 @@
 	}}
 />
 
-
 {#if $page.url.pathname !== '/'}
 	<nav class="absolute right-0 top-0 flex font-mono text-blue-800">
 		<a
@@ -98,15 +93,19 @@
 		>
 			<span> Zachiah&nbsp;Sawyer </span>
 
-			<div class="w-6 h-full icon-[heroicons--arrow-right-end-on-rectangle]" />
+			<div class="icon-[heroicons--arrow-right-end-on-rectangle] h-full w-6" />
 		</a>
 	</nav>
 {/if}
 
 <slot />
 
-
-<canvas width={windowWidth} height={windowHeight} bind:this={canvas} class="fixed top-0 left-0 right-0 bottom-0 z-40 w-screen h-screen pointer-events-none"></canvas>
+<canvas
+	width={windowWidth}
+	height={windowHeight}
+	bind:this={canvas}
+	class="pointer-events-none fixed bottom-0 left-0 right-0 top-0 z-40 h-screen w-screen"
+></canvas>
 
 <style>
 	@keyframes fade-in {

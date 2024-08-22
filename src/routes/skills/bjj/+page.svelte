@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Content from '$lib/components/Content.svelte';
 	import SEO from '$lib/components/SEO.svelte';
 	import SimplePageWrapper from '$lib/components/SimplePageWrapper.svelte';
 </script>
@@ -24,7 +23,8 @@
 		</li>
 
 		<li>
-			I started training at <a href="https://graciebarra.com/hayden-id/">Gracie Barra Hayden</a> in July 2024
+			I started training at <a href="https://graciebarra.com/hayden-id/">Gracie Barra Hayden</a> in July
+			2024
 		</li>
 	</ul>
 </SimplePageWrapper>
