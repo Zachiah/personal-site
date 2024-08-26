@@ -123,10 +123,8 @@
 	</div>
 </section>
 
-<section
-	class="bg-slate-200 p-12 dark:bg-slate-800"
->
-	<div class="max-w-[190ch] mx-auto flex min-h-[40rem] flex-col items-center justify-center">
+<section class="bg-slate-200 p-12 dark:bg-slate-800">
+	<div class="mx-auto flex min-h-[40rem] max-w-[190ch] flex-col items-center justify-center">
 		<h2 class="mb-24 text-center text-4xl">Some Personal Projects</h2>
 
 		<div class="flex w-full flex-wrap gap-12">
