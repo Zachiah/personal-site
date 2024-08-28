@@ -1,5 +1,6 @@
 <script>
 	import Content from '$lib/components/Content.svelte';
+	import Project from './Project.svelte';
 	import SEO from '$lib/components/SEO.svelte';
 
 	const tools = [
@@ -122,106 +123,100 @@
 	</div>
 </section>
 
-<section
-	class="flex min-h-[40rem] flex-col items-center justify-center bg-slate-200 p-12 dark:bg-slate-800"
->
-	<h2 class="mb-24 text-center text-4xl">Some Personal Projects</h2>
+<section class="bg-slate-200 p-12 dark:bg-slate-800">
+	<div class="mx-auto flex min-h-[40rem] max-w-[190ch] flex-col items-center justify-center">
+		<h2 class="mb-24 text-center text-4xl">Some Personal Projects</h2>
 
-	<div class="flex w-full flex-wrap gap-12">
-		<a class="flex-1 rounded-md bg-white p-4 dark:bg-black" href="/">This website</a>
-
-		<a class="flex-1 rounded-md bg-white p-4 dark:bg-black" href="https://timeline.zachiah.com"
-			>Timeline of my life</a
-		>
-		<a class="flex-1 rounded-md bg-white p-4 dark:bg-black" href="https://simon.zachiah.com"
-			>Simon (WIP)</a
-		>
-		<a class="flex-1 rounded-md bg-white p-4 dark:bg-black" href="https://conway.zachiah.com"
-			>Conway's Game of Life</a
-		>
-		<a
-			class="flex-1 rounded-md bg-white p-4 dark:bg-black"
-			href="https://github.com/Zachiah/lots-of-langs">lots-of-langs</a
-		>
-		<a class="flex-1 rounded-md bg-white p-4 dark:bg-black" href="https://github.com/Zachiah/taita"
-			>Taita</a
-		>
+		<div class="flex w-full flex-wrap gap-12">
+			<Project href="/">This Website</Project>
+			<Project href="https://timeline.zachiah.com">Timeline of My Life</Project>
+			<Project href="https://simon.zachiah.com">Simon (WIP)</Project>
+			<Project href="https://conway.zachiah.com">Conway's Game of Life</Project>
+			<Project href="https://github.com/Zachiah/lots-of-langs">Lots of Langs</Project>
+			<Project href="https://github.com/Zachiah/taita">Taita</Project>
+		</div>
 	</div>
 </section>
 
 <section
 	class="flex min-h-[40rem] flex-col items-center justify-center bg-white p-12 dark:bg-black"
 >
-	<h2 class="mb-24 text-center text-4xl">
-		Long list of technologies I have experience with (incomplete)
-	</h2>
+	<div class="max-w-[190ch]">
+		<h2 class="mb-24 text-center text-4xl">
+			Long list of technologies I have experience with (incomplete)
+		</h2>
 
-	<ul
-		class="flex max-h-[50vh] w-auto flex-wrap gap-4 overflow-auto rounded-md p-4 shadow-inner shadow-white"
-	>
-		{#each tools as tool}
-			<li class="w-full rounded-md bg-slate-200 px-4 py-2 dark:bg-slate-600 2xs:w-auto">{tool}</li>
-		{/each}
-	</ul>
+		<ul
+			class="flex max-h-[50vh] w-auto flex-wrap gap-4 overflow-auto rounded-md p-4 shadow-inner shadow-white"
+		>
+			{#each tools as tool}
+				<li class="w-full rounded-md bg-slate-200 px-4 py-2 font-mono dark:bg-slate-600 2xs:w-auto">
+					{tool}
+				</li>
+			{/each}
+		</ul>
+	</div>
 </section>
 
-<section class="flex flex-wrap gap-8 bg-slate-200 p-8 dark:bg-slate-800">
-	<div
-		class="flex-1 rounded-md bg-white p-4 shadow-md dark:bg-black dark:shadow-none xs:min-w-[18rem]"
-	>
-		<Content>
-			<h2>Development Tools I Use</h2>
-			<ul>
-				<li>
-					<a href="https://neovim.io/">Neovim (BTW)</a>
-				</li>
-				<li>
-					<a href="https://github.com/tmux/tmux/wiki">Tmux</a>
-				</li>
-				<li>
-					<a href="https://nixos.org/">Nix & NixOS</a>
-				</li>
-				<li>
-					<a href="https://swaywm.org/">Sway</a>
-				</li>
-				<li>
-					<a href="https://github.com/zachiah/taita">Taita</a>
-				</li>
-				<li>
-					<a href="https://alacritty.org/">Alacritty</a>
-				</li>
-			</ul>
-		</Content>
-	</div>
+<section class="bg-slate-200 p-8 dark:bg-slate-800">
+	<div class="mx-auto flex max-w-[190ch] flex-wrap gap-8">
+		<div
+			class="flex-1 rounded-md bg-white p-4 shadow-md dark:bg-black dark:shadow-none xs:min-w-[18rem]"
+		>
+			<Content>
+				<h2>Development Tools I Use</h2>
+				<ul>
+					<li>
+						<a href="https://neovim.io/">Neovim (BTW)</a>
+					</li>
+					<li>
+						<a href="https://github.com/tmux/tmux/wiki">Tmux</a>
+					</li>
+					<li>
+						<a href="https://nixos.org/">Nix & NixOS</a>
+					</li>
+					<li>
+						<a href="https://swaywm.org/">Sway</a>
+					</li>
+					<li>
+						<a href="https://github.com/zachiah/taita">Taita</a>
+					</li>
+					<li>
+						<a href="https://alacritty.org/">Alacritty</a>
+					</li>
+				</ul>
+			</Content>
+		</div>
 
-	<div
-		class="flex-1 rounded-md bg-white p-4 shadow-md dark:bg-black dark:shadow-none xs:min-w-[18rem]"
-	>
-		<Content>
-			<h2>Language experience</h2>
-			<ul>
-				<li>Rust (1yr)</li>
-				<li>TypeScript (3-4yrs)</li>
-				<li>PHP (2yrs)</li>
-				<li>Python (3yrs)</li>
-				<li>Golang (1yr)</li>
-				<li>Ruby (1yr)</li>
-			</ul>
-		</Content>
-	</div>
+		<div
+			class="flex-1 rounded-md bg-white p-4 shadow-md dark:bg-black dark:shadow-none xs:min-w-[18rem]"
+		>
+			<Content>
+				<h2>Language experience</h2>
+				<ul>
+					<li>Rust (1yr)</li>
+					<li>TypeScript (3-4yrs)</li>
+					<li>PHP (2yrs)</li>
+					<li>Python (3yrs)</li>
+					<li>Golang (1yr)</li>
+					<li>Ruby (1yr)</li>
+				</ul>
+			</Content>
+		</div>
 
-	<div
-		class="flex-1 rounded-md bg-white p-4 shadow-md dark:bg-black dark:shadow-none xs:min-w-[18rem]"
-	>
-		<Content>
-			<h2>Really want to learn</h2>
-			<ul>
-				<li>C</li>
-				<li>Haskell</li>
-				<li>OCaml</li>
-				<li>Swift</li>
-			</ul>
-		</Content>
+		<div
+			class="flex-1 rounded-md bg-white p-4 shadow-md dark:bg-black dark:shadow-none xs:min-w-[18rem]"
+		>
+			<Content>
+				<h2>Really want to learn</h2>
+				<ul>
+					<li>C</li>
+					<li>Haskell</li>
+					<li>OCaml</li>
+					<li>Swift</li>
+				</ul>
+			</Content>
+		</div>
 	</div>
 </section>
 
