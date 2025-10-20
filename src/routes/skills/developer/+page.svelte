@@ -129,7 +129,9 @@
 
 		<div class="flex w-full flex-wrap gap-12">
 			<Project href="/">This Website</Project>
-			<Project href="https://music-theory.zachiah.com/chord-identifier/keyboard">Chord Identifier</Project>
+			<Project href="https://music-theory.zachiah.com/chord-identifier/keyboard"
+				>Chord Identifier</Project
+			>
 			<Project href="https://timeline.zachiah.com">Timeline of My Life</Project>
 			<Project href="https://simon.zachiah.com">Simon (WIP)</Project>
 			<Project href="https://conway.zachiah.com">Conway's Game of Life</Project>
@@ -149,7 +151,7 @@
 			class="flex max-h-[50vh] w-auto flex-wrap gap-4 overflow-auto rounded-md p-4 shadow-inner shadow-white"
 		>
 			{#each tools as tool}
-				<li class="w-full rounded-md bg-slate-200 px-4 py-2 font-mono dark:bg-slate-600 2xs:w-auto">
+				<li class="w-full rounded-md bg-slate-200 px-4 py-2 font-mono 2xs:w-auto dark:bg-slate-600">
 					{tool}
 				</li>
 			{/each}
@@ -160,7 +162,7 @@
 <section class="bg-slate-200 p-8 dark:bg-slate-800">
 	<div class="mx-auto flex max-w-[190ch] flex-wrap gap-8">
 		<div
-			class="flex-1 rounded-md bg-white p-4 shadow-md dark:bg-black dark:shadow-none xs:min-w-[18rem]"
+			class="flex-1 rounded-md bg-white p-4 shadow-md xs:min-w-[18rem] dark:bg-black dark:shadow-none"
 		>
 			<Content>
 				<h2>Development Tools I Use</h2>
@@ -188,7 +190,7 @@
 		</div>
 
 		<div
-			class="flex-1 rounded-md bg-white p-4 shadow-md dark:bg-black dark:shadow-none xs:min-w-[18rem]"
+			class="flex-1 rounded-md bg-white p-4 shadow-md xs:min-w-[18rem] dark:bg-black dark:shadow-none"
 		>
 			<Content>
 				<h2>Language experience</h2>
@@ -204,7 +206,7 @@
 		</div>
 
 		<div
-			class="flex-1 rounded-md bg-white p-4 shadow-md dark:bg-black dark:shadow-none xs:min-w-[18rem]"
+			class="flex-1 rounded-md bg-white p-4 shadow-md xs:min-w-[18rem] dark:bg-black dark:shadow-none"
 		>
 			<Content>
 				<h2>Really want to learn</h2>
