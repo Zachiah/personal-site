@@ -129,11 +129,10 @@
 
 		<div class="flex w-full flex-wrap gap-12">
 			<Project href="/">This Website</Project>
+			<Project href="https://music-theory.zachiah.com/chord-identifier/keyboard">Chord Identifier</Project>
 			<Project href="https://timeline.zachiah.com">Timeline of My Life</Project>
 			<Project href="https://simon.zachiah.com">Simon (WIP)</Project>
 			<Project href="https://conway.zachiah.com">Conway's Game of Life</Project>
-			<Project href="https://github.com/Zachiah/lots-of-langs">Lots of Langs</Project>
-			<Project href="https://github.com/Zachiah/taita">Taita</Project>
 		</div>
 	</div>
 </section>
