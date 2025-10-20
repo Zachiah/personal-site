@@ -2,7 +2,6 @@
 	import { onNavigate } from '$app/navigation';
 	import { page } from '$app/state';
 	import '../app.postcss';
-	import { spring } from 'svelte/motion';
 	import { onMount } from 'svelte';
 	import throttle from 'lodash.throttle';
 	import { assertIsDefined } from '$lib/assert';
@@ -13,8 +12,6 @@
 	let { children }: Props = $props();
 
 	onNavigate((navigation) => {
-		circles = [];
-
 		if (!document.startViewTransition) return;
 
 		return new Promise((resolve) => {
@@ -33,12 +30,6 @@
 		ctx = canvas.getContext('2d');
 	});
 
-	let mousePos = spring({ x: -80, y: -80 }, { stiffness: 0.1, damping: 0.2 });
-
-	let id = $state(0);
-	let circles: { color: string; id: number; x: number; y: number }[] = $state([]);
-	const colors = ['bg-blue-500', 'bg-red-500', 'bg-green-500', 'bg-purple-500', 'bg-orange-500'];
-
 	let windowWidth = $state(1600);
 	let windowHeight = $state(900);
 
@@ -49,8 +40,6 @@
 	bind:innerWidth={windowWidth}
 	bind:innerHeight={windowHeight}
 	onmousemove={throttle((e) => {
-		$mousePos = { x: e.x, y: e.y };
-
 		hue = (hue + 1) % 256;
 
 		assertIsDefined(ctx);
@@ -68,25 +57,6 @@
 			ctx.clearRect(quantizedX, quantizedY, squareSize, squareSize);
 		}, 500);
 	})}
-/>
-
-<svelte:body
-	onmousedown={(e) => {
-		if (page.url.pathname === '') {
-			const newId = id++;
-			circles.push({
-				color: colors[id % colors.length],
-				id: newId,
-				x: e.x,
-				y: e.y + window.scrollY
-			});
-			circles = circles;
-
-			setTimeout(() => {
-				circles = circles.filter((c) => c.id !== newId);
-			}, 1000);
-		}
-	}}
 />
 
 {#if page.url.pathname !== '/'}
