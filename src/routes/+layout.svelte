@@ -1,11 +1,16 @@
 <script lang="ts">
 	import { onNavigate } from '$app/navigation';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import '../app.postcss';
 	import { spring } from 'svelte/motion';
 	import { onMount } from 'svelte';
 	import throttle from 'lodash.throttle';
 	import { assertIsDefined } from '$lib/assert';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
 
 	onNavigate((navigation) => {
 		circles = [];
@@ -20,8 +25,8 @@
 		});
 	});
 
-	let canvas: HTMLCanvasElement | null = null;
-	let ctx: CanvasRenderingContext2D | null = null;
+	let canvas: HTMLCanvasElement | null = $state(null);
+	let ctx: CanvasRenderingContext2D | null = $state(null);
 
 	onMount(() => {
 		assertIsDefined(canvas);
@@ -30,20 +35,20 @@
 
 	let mousePos = spring({ x: -80, y: -80 }, { stiffness: 0.1, damping: 0.2 });
 
-	let id = 0;
-	let circles: { color: string; id: number; x: number; y: number }[] = [];
+	let id = $state(0);
+	let circles: { color: string; id: number; x: number; y: number }[] = $state([]);
 	const colors = ['bg-blue-500', 'bg-red-500', 'bg-green-500', 'bg-purple-500', 'bg-orange-500'];
 
-	let windowWidth = 1600;
-	let windowHeight = 900;
+	let windowWidth = $state(1600);
+	let windowHeight = $state(900);
 
-	let hue = Math.floor(Math.random() * 256);
+	let hue = $state(Math.floor(Math.random() * 256));
 </script>
 
 <svelte:window
 	bind:innerWidth={windowWidth}
 	bind:innerHeight={windowHeight}
-	on:mousemove={throttle((e) => {
+	onmousemove={throttle((e) => {
 		$mousePos = { x: e.x, y: e.y };
 
 		hue = (hue + 1) % 256;
@@ -66,8 +71,8 @@
 />
 
 <svelte:body
-	on:mousedown={(e) => {
-		if ($page.url.pathname === '') {
+	onmousedown={(e) => {
+		if (page.url.pathname === '') {
 			const newId = id++;
 			circles.push({
 				color: colors[id % colors.length],
@@ -84,7 +89,7 @@
 	}}
 />
 
-{#if $page.url.pathname !== '/'}
+{#if page.url.pathname !== '/'}
 	<nav class="absolute right-0 top-0 flex font-mono text-blue-800">
 		<a
 			href="/#links"
@@ -93,12 +98,12 @@
 		>
 			<span> Zachiah&nbsp;Sawyer </span>
 
-			<div class="icon-[heroicons--arrow-right-end-on-rectangle] h-full w-6" />
+			<div class="icon-[heroicons--arrow-right-end-on-rectangle] h-full w-6"></div>
 		</a>
 	</nav>
 {/if}
 
-<slot />
+{@render children?.()}
 
 <canvas
 	width={windowWidth}

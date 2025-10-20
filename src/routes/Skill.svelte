@@ -1,8 +1,11 @@
 <script lang="ts">
-	export let text: string;
-	export let url: string;
+	interface Props {
+		text: string;
+		url: string;
+		colors: string;
+	}
 
-	export let colors: string;
+	let { text, url, colors }: Props = $props();
 </script>
 
 <a

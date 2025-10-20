@@ -27,7 +27,7 @@
 			src="https://www.youtube.com/embed/LDA2AwOuRlA"
 			frameborder="0"
 			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-		/>
+		></iframe>
 
 		<iframe
 			title="Me doing 81 backflips"
@@ -37,6 +37,6 @@
 			src="https://www.youtube.com/embed/vUjGxRTS7PI?si=_YR4HcDxYxpv2XPE"
 			frameborder="0"
 			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-		/>
+		></iframe>
 	</div>
 </SimplePageWrapper>

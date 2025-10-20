@@ -9,7 +9,7 @@
 <PageSection colors="bg-gradient-to-br from-green-500 to-sky-500" id="top">
 	<div class="prose mx-auto text-center text-white">
 		<div
-			class="flex flex-col flex-wrap gap-2 font-mono text-2xl text-gray-800 dark:text-gray-200 2xs:gap-16 2xs:p-4 sm:flex-row sm:text-4xl"
+			class="flex flex-col flex-wrap gap-2 font-mono text-2xl text-gray-800 2xs:gap-16 2xs:p-4 sm:flex-row sm:text-4xl dark:text-gray-200"
 		>
 			<div
 				class="flex h-72 flex-1 flex-col items-center justify-center gap-6 whitespace-normal rounded-lg bg-sky-950 bg-gradient-to-br from-sky-950 to-green-500 px-2 py-10 text-center font-mono text-white shadow-lg xs:p-20"
