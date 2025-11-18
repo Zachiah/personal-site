@@ -243,11 +243,11 @@
 
 			<p>
 				In May of 2023 I started working for CloudOne (an omnichannel digital marketing company) in
-				Vancouver WA. I worked there for just under a year until I moved to Idaho and had to end
-				that engagement. In this role I worked as a Full Stack Software Developer. My day to day
-				involved updating APIs written in PHP, rewriting and patching legacy PHP code, writing new
-				sites in modern stacks and implementing features for the company backend interface as they
-				were needed.
+				Vancouver WA as a Full Stack Software Developer. My day to day has involved updating APIs
+				written in PHP, rewriting and patching legacy PHP code, writing new sites in modern stacks
+				and implementing features for the company backend interface as they were needed. I'm
+				currently working primarily on a new API in typescript as well as an internal tool for a
+				call center written in typescript/vue/nuxt.
 			</p>
 
 			<p>
