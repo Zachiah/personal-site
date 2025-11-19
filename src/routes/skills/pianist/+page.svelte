@@ -12,9 +12,13 @@
 	<h1>I am a pianist</h1>
 
 	<p>I have been playing piano since Septermber 2015</p>
+	<p>I started mostly playing church music (hymns and such)</p>
 	<p>
-		I mostly play church music (hymns and such) although I have done a tiny bit of classical as
-		well. I play based on music theory and a little bit of reading if available. Lately I've been
-		experimenting a lot with the pentatonic scale and lots of tangential concepts.
+		These days I really enjoy improvising based on the emotions I feel in the moment. Playing
+		directly with pure creativity is where I feel most comfortable.
+	</p>
+	<p>
+		I play based my ear and a lot of music theory. Lately I've been experimenting a lot with the the
+		Aeolian Dominant scale.
 	</p>
 </SimplePageWrapper>

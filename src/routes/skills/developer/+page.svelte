@@ -128,13 +128,10 @@
 		<h2 class="mb-24 text-center text-4xl">Some Personal Projects</h2>
 
 		<div class="flex w-full flex-wrap gap-12">
-			<Project href="/">This Website</Project>
-			<Project href="https://music-theory.zachiah.com/chord-identifier/keyboard"
-				>Chord Identifier</Project
-			>
+			<Project href="https://music-theory.zachiah.com/">Music Tools</Project>
 			<Project href="https://timeline.zachiah.com">Timeline of My Life</Project>
-			<Project href="https://simon.zachiah.com">Simon (WIP)</Project>
 			<Project href="https://conway.zachiah.com">Conway's Game of Life</Project>
+			<Project href="/">This Website</Project>
 		</div>
 	</div>
 </section>
@@ -161,34 +158,6 @@
 
 <section class="bg-slate-200 p-8 dark:bg-slate-800">
 	<div class="mx-auto flex max-w-[190ch] flex-wrap gap-8">
-		<div
-			class="flex-1 rounded-md bg-white p-4 shadow-md xs:min-w-[18rem] dark:bg-black dark:shadow-none"
-		>
-			<Content>
-				<h2>Development Tools I Use</h2>
-				<ul>
-					<li>
-						<a href="https://neovim.io/">Neovim (BTW)</a>
-					</li>
-					<li>
-						<a href="https://github.com/tmux/tmux/wiki">Tmux</a>
-					</li>
-					<li>
-						<a href="https://nixos.org/">Nix & NixOS</a>
-					</li>
-					<li>
-						<a href="https://swaywm.org/">Sway</a>
-					</li>
-					<li>
-						<a href="https://github.com/zachiah/taita">Taita</a>
-					</li>
-					<li>
-						<a href="https://alacritty.org/">Alacritty</a>
-					</li>
-				</ul>
-			</Content>
-		</div>
-
 		<div
 			class="flex-1 rounded-md bg-white p-4 shadow-md xs:min-w-[18rem] dark:bg-black dark:shadow-none"
 		>
