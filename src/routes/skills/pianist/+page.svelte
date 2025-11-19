@@ -21,4 +21,7 @@
 		I play based my ear and a lot of music theory. Lately I've been experimenting a lot with the the
 		Aeolian Dominant scale.
 	</p>
+	<p>
+		Please check out my <a href="https://music-theory.zachiah.com/">music theory tools website</a>!
+	</p>
 </SimplePageWrapper>
