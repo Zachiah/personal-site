@@ -4,7 +4,7 @@
 	import Skill from './Skill.svelte';
 </script>
 
-<SEO title="Zachiah Sawyer" description="Hi my name is Zachiah Sawyer. This is my personal site" />
+<SEO title="Zachiah Sawyer" description="Hi! My name is Zachiah Sawyer. This is my personal site" />
 
 <PageSection colors="bg-gradient-to-br from-green-500 to-sky-500" id="top">
 	<div class="prose mx-auto text-center text-white">
@@ -38,6 +38,11 @@
 					alt="Zachiah Sawyer"
 				/>
 			</div>
+			<Skill
+				url="/christian"
+				text="Christian"
+				colors="bg-white from-white to-white text-black"
+			/>
 			<Skill
 				url="/skills/developer"
 				text="Software Engineer"
